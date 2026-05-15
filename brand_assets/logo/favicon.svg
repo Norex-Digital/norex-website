@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Norex Symbol">
+  <title>Norex Symbol</title>
+  <!-- Schwarzer Rounded-Square -->
+  <rect x="0" y="0" width="100" height="100" rx="6" ry="6" fill="#0A0A0A"/>
+  <!-- Weißes N (Geist-Style, zentriert, bold) -->
+  <text x="50" y="72" text-anchor="middle"
+        font-family="'Geist', 'Inter', system-ui, sans-serif"
+        font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-0.02em">N</text>
+  <!-- BVG-Roter diagonaler Slash, oben rechts -->
+  <polygon points="62,0 100,0 100,38 92,42 56,6" fill="#E2231A"/>
+</svg>

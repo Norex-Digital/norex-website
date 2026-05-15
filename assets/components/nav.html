@@ -1,0 +1,184 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-norex-ink-200" style="background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="flex items-center justify-between h-16 md:h-18">
+
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-4 rounded-sm" aria-label="Norex — Startseite">
+        <img src="/brand_assets/logo/norex_logo_primary.svg" alt="Norex" class="h-8 md:h-9 w-auto" width="207" height="54">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Hauptnavigation">
+        <a href="/" class="font-sans text-body font-medium text-norex-ink-500 hover:text-norex-accent focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm" style="transition:color 150ms">Start</a>
+
+        <!-- Leistungen Dropdown -->
+        <div class="relative" id="nav-leistungen">
+          <a href="/leistungen"
+             class="font-sans text-body font-medium text-norex-ink-500 hover:text-norex-accent focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm flex items-center gap-1"
+             style="transition:color 150ms"
+             aria-haspopup="true"
+             aria-expanded="false"
+             id="nav-leistungen-trigger">
+            Leistungen
+            <svg id="nav-leistungen-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" style="transition:transform 200ms cubic-bezier(0.22,1,0.36,1)"><path d="M3 5.5l4 4 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <!-- Dropdown Panel -->
+          <div id="nav-leistungen-panel"
+               role="menu"
+               aria-labelledby="nav-leistungen-trigger"
+               class="absolute top-full left-1/2 mt-2 w-72 bg-white border border-norex-ink-200 shadow-lg opacity-0 pointer-events-none"
+               style="transform:translateX(-50%) translateY(-4px);transition:opacity 150ms,transform 150ms cubic-bezier(0.22,1,0.36,1);box-shadow:0 8px 32px rgba(10,10,10,0.12),0 2px 8px rgba(10,10,10,0.06)">
+            <a href="/leistungen/akquise"
+               role="menuitem"
+               class="flex flex-col px-5 py-4 border-b border-norex-ink-100 hover:bg-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-[-2px]"
+               style="transition:background 100ms">
+              <span class="font-mono font-bold text-norex-accent mb-0.5" style="font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase">Neukundengewinnung</span>
+              <span class="font-display font-semibold text-norex-primary text-body">Mehr Kunden von Google</span>
+              <span class="font-sans text-body-s text-norex-ink-400 mt-0.5">GBP · Local SEO · Posting</span>
+            </a>
+            <a href="/leistungen/operations"
+               role="menuitem"
+               class="flex flex-col px-5 py-4 border-b border-norex-ink-100 hover:bg-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-[-2px]"
+               style="transition:background 100ms">
+              <span class="font-mono font-bold text-norex-accent mb-0.5" style="font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase">Anfragen-Automatisierung</span>
+              <span class="font-display font-semibold text-norex-primary text-body">Anfragen automatisieren</span>
+              <span class="font-sans text-body-s text-norex-ink-400 mt-0.5">WhatsApp · E-Mail · Auto-Angebot</span>
+            </a>
+            <a href="/leistungen/komplett"
+               role="menuitem"
+               class="flex flex-col px-5 py-4 border-b border-norex-ink-200 hover:bg-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-[-2px]"
+               style="transition:background 100ms">
+              <span class="font-mono font-bold text-norex-accent mb-0.5" style="font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase">Kombi A+B · Beliebt</span>
+              <span class="font-display font-semibold text-norex-primary text-body">Komplettkette</span>
+              <span class="font-sans text-body-s text-norex-ink-400 mt-0.5">Alles aus einer Hand · 300 € gespart</span>
+            </a>
+            <a href="/so-laeuft-es-ab"
+               role="menuitem"
+               class="flex items-center justify-between px-5 py-3.5 hover:bg-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-[-2px]"
+               style="transition:background 100ms">
+              <span class="font-sans text-body-s font-medium text-norex-ink-500">Wie die Zusammenarbeit abläuft</span>
+              <svg width="11" height="11" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="text-norex-ink-300"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <a href="/garantie" class="font-sans text-body font-medium text-norex-ink-500 hover:text-norex-accent focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm" style="transition:color 150ms">Garantie</a>
+        <a href="/ueber-uns" class="font-sans text-body font-medium text-norex-ink-500 hover:text-norex-accent focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm" style="transition:color 150ms">Über uns</a>
+        <a href="/kontakt" class="font-sans text-body font-medium text-norex-ink-500 hover:text-norex-accent focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm" style="transition:color 150ms">Kontakt</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="/sichtbarkeitscheck"
+        class="hidden md:inline-flex items-center gap-2 bg-norex-accent text-white font-sans font-bold text-body-s px-4 py-2.5 rounded
+               focus-visible:outline-2 focus-visible:outline-norex-primary focus-visible:outline-offset-2"
+        style="transition:transform 150ms cubic-bezier(0.34,1.56,0.64,1)"
+        onmouseover="this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.transform='translateY(0)'"
+        onmousedown="this.style.transform='translateY(0)'">
+        Sichtbarkeitscheck
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <button id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-mobile"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2">
+        <span class="nav-bar block w-6 h-0.5 bg-norex-primary" style="transition:transform 200ms,opacity 200ms"></span>
+        <span class="nav-bar block w-6 h-0.5 bg-norex-primary" style="transition:transform 200ms,opacity 200ms"></span>
+        <span class="nav-bar block w-6 h-0.5 bg-norex-primary" style="transition:transform 200ms,opacity 200ms"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="nav-mobile" class="md:hidden hidden border-t border-norex-ink-200 bg-white" aria-label="Mobile Navigation">
+    <nav class="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-1">
+      <a href="/" class="font-sans text-body-l font-medium text-norex-primary py-3 border-b border-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm">Start</a>
+      <!-- Leistungen Gruppe -->
+      <div class="border-b border-norex-ink-100">
+        <a href="/leistungen" class="font-sans text-body-l font-medium text-norex-primary py-3 flex items-center justify-between focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm">
+          Leistungen
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true" class="text-norex-ink-400"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="pl-4 pb-3 flex flex-col gap-1">
+          <a href="/leistungen/akquise" class="font-sans text-body text-norex-ink-500 py-1.5 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm hover:text-norex-accent" style="transition:color 150ms">
+            Mehr Kunden von Google
+          </a>
+          <a href="/leistungen/operations" class="font-sans text-body text-norex-ink-500 py-1.5 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm hover:text-norex-accent" style="transition:color 150ms">
+            Anfragen automatisieren
+          </a>
+          <a href="/leistungen/komplett" class="font-sans text-body text-norex-ink-500 py-1.5 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm hover:text-norex-accent" style="transition:color 150ms">
+            Komplettkette
+          </a>
+        </div>
+      </div>
+      <a href="/garantie" class="font-sans text-body-l font-medium text-norex-primary py-3 border-b border-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm">Garantie</a>
+      <a href="/ueber-uns" class="font-sans text-body-l font-medium text-norex-primary py-3 border-b border-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm">Über uns</a>
+      <a href="/kontakt" class="font-sans text-body-l font-medium text-norex-primary py-3 border-b border-norex-ink-100 focus-visible:outline-2 focus-visible:outline-norex-accent rounded-sm">Kontakt</a>
+      <a href="/sichtbarkeitscheck" class="mt-4 inline-flex justify-center items-center gap-2 bg-norex-accent text-white font-sans font-bold text-body px-5 py-3.5 rounded focus-visible:outline-2 focus-visible:outline-norex-primary focus-visible:outline-offset-2">
+        Sichtbarkeitscheck
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+(function () {
+  // Mobile hamburger
+  var btn = document.getElementById('nav-toggle');
+  var menu = document.getElementById('nav-mobile');
+  if (btn && menu) {
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      var bars = btn.querySelectorAll('.nav-bar');
+      if (open) {
+        bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+        bars[1].style.opacity = '0';
+        bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+      } else {
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '';
+        bars[2].style.transform = '';
+      }
+    });
+  }
+
+  // Desktop Leistungen dropdown
+  var trigger = document.getElementById('nav-leistungen-trigger');
+  var panel = document.getElementById('nav-leistungen-panel');
+  var chevron = document.getElementById('nav-leistungen-chevron');
+  var wrapper = document.getElementById('nav-leistungen');
+  if (!trigger || !panel || !wrapper) return;
+
+  function openDropdown() {
+    panel.style.opacity = '1';
+    panel.style.pointerEvents = 'auto';
+    panel.style.transform = 'translateX(-50%) translateY(0)';
+    trigger.setAttribute('aria-expanded', 'true');
+    chevron.style.transform = 'rotate(180deg)';
+  }
+
+  function closeDropdown() {
+    panel.style.opacity = '0';
+    panel.style.pointerEvents = 'none';
+    panel.style.transform = 'translateX(-50%) translateY(-4px)';
+    trigger.setAttribute('aria-expanded', 'false');
+    chevron.style.transform = '';
+  }
+
+  wrapper.addEventListener('mouseenter', openDropdown);
+  wrapper.addEventListener('mouseleave', closeDropdown);
+
+  trigger.addEventListener('focus', openDropdown);
+  panel.addEventListener('focusout', function (e) {
+    if (!wrapper.contains(e.relatedTarget)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDropdown();
+  });
+})();
+</script>

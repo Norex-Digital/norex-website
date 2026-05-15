@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Disallow: /archive/
+Disallow: /brand_assets/
+Disallow: /test-versions/
+Disallow: /.claude/
+Disallow: /node_modules/
+Disallow: /temporary screenshots/
+Disallow: /assets/components/
+
+Sitemap: https://norex-digital.de/sitemap.xml

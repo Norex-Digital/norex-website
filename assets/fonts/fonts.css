@@ -1,0 +1,31 @@
+/* Norex Website — Self-hosted Google Fonts
+   Source: Google Fonts (Geist, Geist Mono, Manrope)
+   DSGVO-konform: keine Verbindung zu fonts.googleapis.com / fonts.gstatic.com beim Seitenaufruf.
+*/
+
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('/assets/fonts/google/geist.woff2') format('woff2-variations'),
+       url('/assets/fonts/google/geist.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/assets/fonts/google/geist-mono.woff2') format('woff2-variations'),
+       url('/assets/fonts/google/geist-mono.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/assets/fonts/google/manrope.woff2') format('woff2-variations'),
+       url('/assets/fonts/google/manrope.woff2') format('woff2');
+}

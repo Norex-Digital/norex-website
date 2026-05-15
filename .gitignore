@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Internal tooling & screenshots
+temporary screenshots/
+screenshot*.mjs
+serve.mjs
+audit-tech.mjs
+
+# Preview & draft files
+preview-*.html
+_hero-b.html
+_walkthrough.html
+_wireframes/
+test-versions/
+design-audit-20260418/
+prompts/
+context/
+
+# Archive
+archive/
+
+# Email signature templates (internal only)
+brand_assets/email_signature/
+
+# Internal planning docs
+PAGE_BUILD_PLAN.md
+DESIGN.md
+handoff_website_workspace.md
+tasks/
+*.pdf
+*.png
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Secrets
+.env
+.env.*
+
+# Internal AI tooling
+.gstack/
+.claude/
+.claudeignore

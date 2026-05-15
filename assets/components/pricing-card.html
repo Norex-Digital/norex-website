@@ -1,0 +1,51 @@
+<div class="pricing-card relative flex flex-col bg-white border border-norex-ink-200 rounded-lg p-8 h-full"
+  style="box-shadow:0 2px 8px rgba(10,10,10,0.04),0 12px 32px rgba(10,10,10,0.06);transition:transform 250ms cubic-bezier(0.34,1.56,0.64,1),box-shadow 250ms"
+  onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 4px 16px rgba(10,10,10,0.06),0 20px 48px rgba(10,10,10,0.10)'"
+  onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(10,10,10,0.04),0 12px 32px rgba(10,10,10,0.06)'">
+
+  <!-- Segment-Label -->
+  <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-3" data-card-segment></p>
+
+  <!-- Title -->
+  <h3 class="font-display font-bold text-display-s text-norex-primary mb-2" data-card-title></h3>
+
+  <!-- Outcome-Sub -->
+  <p class="font-sans text-body text-norex-ink-500 mb-6 leading-relaxed" data-card-sub></p>
+
+  <!-- Pricing -->
+  <div class="border-t border-norex-ink-200 pt-6 mb-6">
+    <div class="flex items-baseline gap-1 mb-1">
+      <span class="font-mono font-bold tabular-nums text-norex-primary" style="font-size:1.75rem;letter-spacing:-0.02em" data-card-setup></span>
+      <span class="font-sans text-body-s text-norex-ink-400">Setup</span>
+    </div>
+    <div class="flex items-baseline gap-1">
+      <span class="font-mono font-bold tabular-nums text-norex-primary" style="font-size:1.25rem" data-card-monthly></span>
+      <span class="font-sans text-body-s text-norex-ink-400">pro Monat</span>
+    </div>
+  </div>
+
+  <!-- Garantie-Linie -->
+  <div class="flex items-center gap-2 mb-6">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="font-sans text-body-s text-norex-accent font-medium">Garantiert messbar in 90 Tagen</span>
+  </div>
+
+  <!-- Features -->
+  <ul class="space-y-2 mb-8 flex-1" data-card-features>
+    <!-- JS füllt via data-Attribut -->
+  </ul>
+
+  <!-- Mini-CTA -->
+  <a href="/quiz"
+    class="mt-auto inline-flex items-center justify-center gap-2 border-2 border-norex-primary text-norex-primary font-sans font-bold text-body-s px-4 py-3 rounded
+           focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"
+    style="transition:transform 150ms cubic-bezier(0.34,1.56,0.64,1),background 150ms,color 150ms"
+    onmouseover="this.style.transform='translateY(-2px)';this.style.background='#0A0A0A';this.style.color='#FFFFFF'"
+    onmouseout="this.style.transform='';this.style.background='';this.style.color=''"
+    onmousedown="this.style.transform='translateY(0)'">
+    Welches passt zu mir?
+    <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Norex Brand-Foundation — Validierungs-Test</title>
+<link rel="icon" type="image/svg+xml" href="logo/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@600;700;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --norex-primary: #0A0A0A;
+    --norex-secondary: #FFFFFF;
+    --norex-accent: #E2231A;
+    --norex-bg: #FFFFFF;
+    --norex-bg-soft: #F8F7F4;
+    --norex-ink-500: #3A3833;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Manrope', system-ui, sans-serif; color: var(--norex-ink-500); background: var(--norex-bg); line-height: 1.7; padding: 48px 24px; }
+  h1, h2, h3 { font-family: 'Geist', system-ui, sans-serif; color: var(--norex-primary); letter-spacing: -0.02em; }
+  h1 { font-weight: 800; font-size: clamp(3rem, 8vw, 4rem); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 16px; }
+  h2 { font-weight: 700; font-size: clamp(1.75rem, 5vw, 2.5rem); margin: 48px 0 16px; padding-top: 32px; border-top: 2px solid var(--norex-accent); }
+  h3 { font-weight: 700; font-size: 1.375rem; margin: 24px 0 12px; }
+  .container { max-width: 960px; margin: 0 auto; }
+  .test-row { display: flex; align-items: center; gap: 32px; padding: 16px 0; border-bottom: 1px solid #E8E5DD; }
+  .test-row img { background: white; padding: 4px; border: 1px solid #E8E5DD; }
+  .accent { color: var(--norex-accent); font-weight: 700; }
+  .badge { display: inline-block; background: var(--norex-accent); color: var(--norex-secondary); padding: 6px 12px; border-radius: 4px; font-weight: 700; font-size: 14px; letter-spacing: 0.02em; }
+  .swatch { display: inline-block; width: 64px; height: 64px; border-radius: 8px; vertical-align: middle; margin-right: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { text-align: left; padding: 12px; border-bottom: 1px solid #E8E5DD; }
+  th { font-family: 'Geist', sans-serif; font-weight: 600; }
+  .umlaut-test { font-size: 64px; font-family: 'Geist', sans-serif; font-weight: 800; letter-spacing: -0.025em; }
+  .body-test { font-family: 'Manrope', sans-serif; font-size: 16px; line-height: 1.7; max-width: 65ch; }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Mehr Aufträge, weniger Papierkram.</h1>
+    <p class="body-test">Wir bringen Handwerks- und Reinigungsbetriebe auf Google — und beantworten jede Anfrage automatisch. Die einzige Komplettkette aus einer Hand für Handwerk und Reinigung in Deutschland.</p>
+    <p style="margin-top: 12px;"><span class="badge">+50% mehr Anrufe in 90 Tagen</span></p>
+
+    <h2>1. Logo-Skalierung</h2>
+    <p class="body-test">Verifikation dass das Logo in allen Größen funktional bleibt — von 16px Favicon bis 200px Hero-Logo.</p>
+    <div class="test-row">
+      <img src="logo/norex_logo_symbol.svg" width="16" height="16" alt="16px">
+      <span>16×16 (Browser-Tab-Favicon)</span>
+    </div>
+    <div class="test-row">
+      <img src="logo/norex_logo_symbol.svg" width="32" height="32" alt="32px">
+      <span>32×32 (GBP-Avatar minimum)</span>
+    </div>
+    <div class="test-row">
+      <img src="logo/norex_logo_symbol.svg" width="64" height="64" alt="64px">
+      <span>64×64 (Mobile-Header)</span>
+    </div>
+    <div class="test-row">
+      <img src="logo/norex_logo_primary.svg" height="80" alt="Primary 80px">
+      <span>Primary Lockup, 80px Höhe</span>
+    </div>
+    <div class="test-row">
+      <img src="logo/norex_logo_horizontal.svg" height="48" alt="Horizontal 48px">
+      <span>Horizontal Lockup (Briefkopf-Variante)</span>
+    </div>
+    <div class="test-row">
+      <img src="logo/norex_logo_square.svg" width="120" height="120" alt="Square 120px">
+      <span>Square (Social-Avatar)</span>
+    </div>
+    <div class="test-row" style="background: #0A0A0A; padding: 24px; border-radius: 8px;">
+      <img src="logo/norex_logo_mono_white.svg" height="60" alt="Mono White">
+      <span style="color: white;">Mono White auf dunkler BG</span>
+    </div>
+
+    <h2>2. Typografie</h2>
+    <h3>Geist (Display)</h3>
+    <div class="umlaut-test">Aufträge — 1.000€ ä ö ü ß</div>
+    <p style="font-family: 'Geist', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.1; margin-top: 16px;">
+      Section-Headline H2 — kantig und präzise
+    </p>
+
+    <h3>Manrope (Body)</h3>
+    <p class="body-test" style="margin-top: 8px;">
+      Wir bringen Ihren Handwerksbetrieb auf Google — und beantworten jede Anfrage automatisch.
+      Für Berlin und Brandenburg. Garantie: messbar mehr in 90 Tagen — oder erster Monat kostenlos.
+      „Sprachstil" mit deutschen Anführungszeichen, Umlaute (ä ö ü ß), €-Symbol getestet.
+      Sehr gute Lesbarkeit auch in längeren Reading-Passages für 35-60 Zielgruppe.
+    </p>
+
+    <h2>3. Color Palette</h2>
+    <p>
+      <span class="swatch" style="background: #0A0A0A;"></span> Primary #0A0A0A
+      <span class="swatch" style="background: #FFFFFF; border: 1px solid #B8B5AB;"></span> Secondary #FFFFFF
+      <span class="swatch" style="background: #E2231A;"></span> Accent #E2231A (BVG-Rot)
+      <span class="swatch" style="background: #F8F7F4;"></span> BG-Soft #F8F7F4
+    </p>
+    <p style="margin-top: 16px;">
+      <span class="swatch" style="background: #1F7A4F;"></span> Success #1F7A4F
+      <span class="swatch" style="background: #C77B22;"></span> Warning #C77B22
+      <span class="swatch" style="background: #B94B3A;"></span> Error #B94B3A
+      <span class="swatch" style="background: #3F6FB8;"></span> Info #3F6FB8
+    </p>
+
+    <h2>4. Kontrast-Validation</h2>
+    <table>
+      <tr><th>Foreground / Background</th><th>Ratio</th><th>WCAG</th></tr>
+      <tr><td style="background: #FFFFFF; color: #0A0A0A; padding: 12px;">Primary auf Weiß</td><td>20.4:1</td><td>✓✓✓ AAA</td></tr>
+      <tr><td style="background: #F8F7F4; color: #3A3833; padding: 12px;">Ink-500 auf BG-Soft</td><td>11.2:1</td><td>✓✓✓ AAA</td></tr>
+      <tr><td style="background: #0A0A0A; color: #FFFFFF; padding: 12px;">Weiß auf Primary</td><td>20.4:1</td><td>✓✓✓ AAA</td></tr>
+      <tr><td style="background: #E2231A; color: #FFFFFF; padding: 12px; font-weight: 700; font-size: 18px;">CTA-Pattern</td><td>3.6:1</td><td>✓ AA Large only (18px+ Bold)</td></tr>
+    </table>
+
+    <h2>5. CTA-Patterns</h2>
+    <button style="background: var(--norex-accent); color: white; border: none; padding: 14px 32px; border-radius: 8px; font-family: 'Geist', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.01em; cursor: pointer; transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+      Kostenlosen Sichtbarkeitscheck anfordern
+    </button>
+    <br><br>
+    <button style="background: transparent; color: var(--norex-primary); border: 2px solid var(--norex-primary); padding: 12px 30px; border-radius: 8px; font-family: 'Geist', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer;">
+      30 Min Demo buchen
+    </button>
+
+    <h2>6. Brand-Foundation Status</h2>
+    <p class="body-test">
+      Diese Test-Page validiert die Norex Brand-Foundation. Alle visuellen Elemente sollten korrekt rendern: Logo in allen Größen lesbar, Geist Display und Manrope Body geladen, Umlaute + €-Symbol sauber, AAA-Kontrast auf Body-Text, CTAs mit Hover-Animation.
+    </p>
+    <p class="body-test" style="margin-top: 16px;">
+      <strong class="accent">✓ Status:</strong> Brand-Foundation komplett. Bereit für Page-Build (Plan 2).
+    </p>
+
+  </div>
+</body>
+</html>

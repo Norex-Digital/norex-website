@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welche Norex-Lösung passt zu Ihnen? · 4-Fragen-Check</title>
+  <meta name="description" content="4 kurze Fragen — sofort eine konkrete Empfehlung, welche Norex-Lösung zu Ihrem Handwerksbetrieb in Berlin & Brandenburg passt. Neukundengewinnung, Anfragen-Automatisierung oder Komplettkette.">
+  <link rel="canonical" href="https://norex-digital.de/quiz">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Welche Norex-Lösung passt zu Ihrem Betrieb? · 4-Fragen-Check">
+  <meta property="og:description" content="Vier kurze Fragen — sofort eine konkrete Empfehlung. Kein Gespräch nötig. Für Handwerks- und Reinigungsbetriebe in Berlin & Brandenburg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://norex-digital.de/quiz">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://placehold.co/1200x630/0A0A0A/FFFFFF?text=Norex+4-Fragen-Check">
+  <meta property="og:site_name" content="Norex">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Welche Norex-Lösung passt zu Ihrem Betrieb?">
+  <meta name="twitter:description" content="Vier kurze Fragen — sofort die richtige Empfehlung für Ihren Handwerksbetrieb. Kein Gespräch nötig.">
+  <meta name="twitter:image" content="https://placehold.co/1200x630/0A0A0A/FFFFFF?text=Norex+4-Fragen-Check">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/logo/favicon.svg">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'norex-primary':   '#0A0A0A',
+            'norex-secondary': '#FFFFFF',
+            'norex-accent':    '#E2231A',
+            'norex-bg':        '#FFFFFF',
+            'norex-bg-soft':   '#F8F7F4',
+            'norex-ink': {
+              100: '#F8F7F4', 200: '#E8E5DD', 300: '#B8B5AB',
+              400: '#6B6960', 500: '#3A3833', 600: '#1A1916',
+            },
+            success: '#1F7A4F',
+          },
+          fontFamily: {
+            display: ['"Geist"', 'system-ui', 'sans-serif'],
+            sans:    ['"Manrope"', 'system-ui', 'sans-serif'],
+            mono:    ['"Geist Mono"', 'ui-monospace', 'monospace'],
+          },
+          fontSize: {
+            'display-xl': ['3rem',    { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+            'display-l':  ['2.25rem', { lineHeight: '1.1',  letterSpacing: '-0.02em'  }],
+            'display-m':  ['1.75rem', { lineHeight: '1.15', letterSpacing: '-0.01em'  }],
+            'display-s':  ['1.375rem',{ lineHeight: '1.2',  letterSpacing: '0'        }],
+            'body-l': ['1.125rem', { lineHeight: '1.7' }],
+            'body':   ['1rem',     { lineHeight: '1.7' }],
+            'body-s': ['0.875rem', { lineHeight: '1.6' }],
+          },
+          transitionTimingFunction: {
+            'spring':    'cubic-bezier(0.34, 1.56, 0.64, 1)',
+            'out-quart': 'cubic-bezier(0.22, 1, 0.36, 1)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://norex-digital.de/quiz",
+        "url": "https://norex-digital.de/quiz",
+        "name": "Welche Norex-Lösung passt zu Ihnen? · 4-Fragen-Check",
+        "description": "4 kurze Fragen — sofort eine konkrete Empfehlung, welche Norex-Lösung zu Ihrem Handwerksbetrieb in Berlin & Brandenburg passt.",
+        "isPartOf": { "@id": "https://norex-digital.de/#website" },
+        "about": { "@id": "https://norex-digital.de/#organization" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://norex-digital.de/" },
+          { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://norex-digital.de/leistungen" },
+          { "@type": "ListItem", "position": 3, "name": "4-Fragen-Check", "item": "https://norex-digital.de/quiz" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Step entrance animation */
+    @keyframes stepIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .step-enter { animation: stepIn 260ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+    /* Result card entrance */
+    @keyframes resultIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .result-enter { animation: resultIn 380ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+    /* Answer button: base */
+    .answer-btn {
+      border: 1px solid #1A1916;
+      background: transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      width: 100%;
+      text-align: left;
+      padding: 1.125rem 1.25rem;
+      min-height: 56px;
+      transition: background 120ms ease, border-color 120ms ease, transform 100ms cubic-bezier(0.34,1.56,0.64,1);
+      color: #fff;
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+    .answer-btn:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.25);
+    }
+    .answer-btn:active {
+      transform: scale(0.99);
+    }
+    .answer-btn[aria-checked="true"] {
+      background: rgba(226,35,26,0.12);
+      border-color: #E2231A;
+    }
+    .answer-btn:focus-visible {
+      outline: 2px solid #E2231A;
+      outline-offset: 2px;
+    }
+
+    /* Progress bar fill */
+    #progress-fill {
+      transition: width 380ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Email section reveal */
+    #email-section {
+      transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+      }
+    }
+  </style>
+  <!-- Google Consent Mode v2 — muss vor GA4 stehen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJ2TTH429"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YCJ2TTH429');
+  </script>
+  <!-- Klaro Cookie Consent (DSGVO) -->
+  <link rel="stylesheet" href="/assets/klaro/klaro.min.css">
+  <script src="/assets/klaro/klaro-config.js"></script>
+  <script defer src="/assets/klaro/klaro.js"></script>
+</head>
+<body class="bg-white font-sans antialiased">
+
+  <div data-component="nav" style="visibility:hidden"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — weiß, zentriert, max-w-3xl
+  ═══════════════════════════════════════════ -->
+  <section class="pt-36 pb-16 px-4 md:px-8 bg-white" aria-labelledby="quiz-hero-heading">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-7">
+        <ol class="flex flex-wrap items-center justify-center gap-2"
+            style="font-family:'Geist Mono',monospace;font-size:0.7rem;letter-spacing:0.06em;color:#6B6960">
+          <li><a href="/" class="hover:text-norex-primary"
+                 style="transition:color 120ms"
+                 data-track="breadcrumb_home">Home</a></li>
+          <li aria-hidden="true" style="color:#B8B5AB">/</li>
+          <li><a href="/leistungen" class="hover:text-norex-primary"
+                 style="transition:color 120ms"
+                 data-track="breadcrumb_leistungen">Leistungen</a></li>
+          <li aria-hidden="true" style="color:#B8B5AB">/</li>
+          <li style="color:#0A0A0A;font-weight:600" aria-current="page">4-Fragen-Check</li>
+        </ol>
+      </nav>
+
+      <p class="font-mono font-bold text-norex-accent mb-5"
+         style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase">
+        4 Fragen · 90 Sekunden · Keine Anmeldung
+      </p>
+
+      <h1 id="quiz-hero-heading"
+          class="font-display font-extrabold text-norex-primary mb-5"
+          style="font-size:clamp(2.25rem,5.5vw,3.5rem);line-height:1.05;letter-spacing:-0.025em">
+        Mehr Kunden<br>oder weniger Chaos —<br>
+        <span class="text-norex-accent">oder beides?</span>
+      </h1>
+
+      <p class="font-sans text-body-l text-norex-ink-400 mb-10 max-w-lg mx-auto" style="line-height:1.7">
+        Vier kurze Fragen — sofort eine konkrete Empfehlung, welche Norex-Lösung zu Ihrem Betrieb passt. Kein Gespräch nötig.
+      </p>
+
+      <!-- Quick trust chips -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10">
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Anonym — keine E-Mail nötig
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Konkrete Preise in der Empfehlung
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Keine Kaltakquise danach
+        </span>
+      </div>
+
+      <a href="#quiz-section"
+         class="inline-flex items-center gap-2 font-sans font-bold text-body-s text-norex-accent rounded
+                focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"
+         style="transition:opacity 150ms"
+         onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+        Jetzt starten
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       QUIZ — dunkel, max-w-lg, zentriert
+  ═══════════════════════════════════════════ -->
+  <section id="quiz-section" class="py-20 px-4 md:px-8 bg-norex-primary" aria-label="Selbst-Qualifizierungs-Check">
+    <div class="max-w-lg mx-auto">
+
+      <!-- Progress -->
+      <div class="mb-12" aria-hidden="true">
+        <div class="flex items-center justify-between mb-2.5">
+          <span id="step-label" class="font-mono font-bold text-norex-accent"
+                style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase">Schritt 1 von 4</span>
+          <span id="step-pct" class="font-mono text-norex-ink-400"
+                style="font-size:0.7rem">25 %</span>
+        </div>
+        <div class="w-full bg-norex-ink-600 rounded-full overflow-hidden" style="height:2px">
+          <div id="progress-fill" class="h-full bg-norex-accent rounded-full" style="width:25%"></div>
+        </div>
+      </div>
+
+      <!-- Screen-reader live region -->
+      <div id="quiz-announcement" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+      <!-- ──────────────────────────────
+           Frage 1
+      ────────────────────────────── -->
+      <div id="q1" role="radiogroup" aria-labelledby="q1-label">
+        <h2 id="q1-label" class="font-display font-bold text-white mb-2"
+            style="font-size:clamp(1.5rem,3.5vw,1.875rem);line-height:1.15;letter-spacing:-0.015em">
+          Was ist gerade das größte Problem in Ihrem Betrieb?
+        </h2>
+        <p class="font-sans text-body-s text-norex-ink-400 mb-7">
+          Wählen Sie die Aussage, die am besten auf Sie zutrifft.
+        </p>
+
+        <div class="space-y-2.5">
+          <button type="button" role="radio" aria-checked="false" data-q="1" data-value="A"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">A</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Zu wenige neue Anfragen</strong>
+              <span class="text-norex-ink-400"> — der Kalender ist oft nicht voll</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="1" data-value="B"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">B</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Anfragen gehen verloren</strong>
+              <span class="text-norex-ink-400"> — ich schaffe nicht alles rechtzeitig zu beantworten</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="1" data-value="Kombi"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">C</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Beides</strong>
+              <span class="text-norex-ink-400"> — zu wenig neue Kunden und zu viel Chaos beim Antworten</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────
+           Frage 2: Akquise-Methode
+      ────────────────────────────── -->
+      <div id="q2" class="hidden" role="radiogroup" aria-labelledby="q2-label" aria-hidden="true">
+        <h2 id="q2-label" class="font-display font-bold text-white mb-2"
+            style="font-size:clamp(1.5rem,3.5vw,1.875rem);line-height:1.15;letter-spacing:-0.015em">
+          Wie gewinnen Sie heute neue Kunden?
+        </h2>
+        <p class="font-sans text-body-s text-norex-ink-400 mb-7">
+          Wählen Sie was am besten auf Ihren Betrieb zutrifft.
+        </p>
+
+        <div class="space-y-2.5">
+          <button type="button" role="radio" aria-checked="false" data-q="2" data-value="empfehlung"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">A</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Fast nur über Empfehlungen</strong>
+              <span class="text-norex-ink-400"> — wenn ein Kunde empfiehlt, kommt ein Auftrag</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="2" data-value="portal"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">B</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Über Portale wie MyHammer oder Blauarbeit</strong>
+              <span class="text-norex-ink-400"> — ich zahle Provision pro Auftrag</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="2" data-value="keine"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">C</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Noch keine geregelte Methode</strong>
+              <span class="text-norex-ink-400"> — es läuft irgendwie</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────
+           Frage 3: Admin-Zeit
+      ────────────────────────────── -->
+      <div id="q3" class="hidden" role="radiogroup" aria-labelledby="q3-label" aria-hidden="true">
+        <h2 id="q3-label" class="font-display font-bold text-white mb-2"
+            style="font-size:clamp(1.5rem,3.5vw,1.875rem);line-height:1.15;letter-spacing:-0.015em">
+          Wie viel Zeit verlieren Sie pro Woche mit Bürokram, Telefonaten und Anfragen?
+        </h2>
+        <p class="font-sans text-body-s text-norex-ink-400 mb-7">
+          Schätzen Sie in etwa — kein exakter Wert nötig.
+        </p>
+
+        <div class="space-y-2.5">
+          <button type="button" role="radio" aria-checked="false" data-q="3" data-value="wenig"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">A</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Unter 5 Stunden</strong>
+              <span class="text-norex-ink-400"> — noch im Griff</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="3" data-value="mittel"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">B</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">5 bis 15 Stunden</strong>
+              <span class="text-norex-ink-400"> — nervt schon</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="3" data-value="viel"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">C</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Mehr als 15 Stunden</strong>
+              <span class="text-norex-ink-400"> — echtes Problem</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────
+           Frage 4: Team-Größe
+      ────────────────────────────── -->
+      <div id="q4" class="hidden" role="radiogroup" aria-labelledby="q4-label" aria-hidden="true">
+        <h2 id="q4-label" class="font-display font-bold text-white mb-2"
+            style="font-size:clamp(1.5rem,3.5vw,1.875rem);line-height:1.15;letter-spacing:-0.015em">
+          Wie groß ist Ihr Team?
+        </h2>
+        <p class="font-sans text-body-s text-norex-ink-400 mb-7">
+          Das hilft uns, den richtigen Umfang einzuschätzen.
+        </p>
+
+        <div class="space-y-2.5">
+          <button type="button" role="radio" aria-checked="false" data-q="4" data-value="klein"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">A</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Nur ich</strong>
+              <span class="text-norex-ink-400"> — oder ich mit einer Aushilfe</span>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="4" data-value="mittel"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">B</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">2 bis 5 Mitarbeiter</strong>
+            </span>
+          </button>
+
+          <button type="button" role="radio" aria-checked="false" data-q="4" data-value="gross"
+                  class="answer-btn">
+            <span class="font-mono font-bold text-norex-accent flex-shrink-0"
+                  style="font-size:0.65rem;letter-spacing:0.08em;margin-right:14px;margin-top:1px">C</span>
+            <span>
+              <strong class="font-bold" style="font-weight:700">Mehr als 5 Mitarbeiter</strong>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ──────────────────────────────
+           Ergebnis (via JS befüllt)
+      ────────────────────────────── -->
+      <div id="quiz-result" class="hidden" aria-hidden="true" aria-live="polite"></div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EMAIL CAPTURE — soft white, nach Ergebnis
+  ═══════════════════════════════════════════ -->
+  <section id="email-section" class="py-16 px-4 md:px-8 bg-norex-bg-soft" style="display:none" aria-labelledby="email-heading">
+    <div class="max-w-lg mx-auto text-center">
+
+      <p class="font-mono font-bold text-norex-accent mb-3"
+         style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase">Optional</p>
+      <h2 id="email-heading" class="font-display font-bold text-norex-primary mb-3"
+          style="font-size:clamp(1.375rem,3vw,1.75rem);line-height:1.15;letter-spacing:-0.015em">
+        Empfehlung per Mail speichern
+      </h2>
+      <p class="font-sans text-body text-norex-ink-400 mb-8 max-w-md mx-auto">
+        Wir schicken Ihnen die Zusammenfassung einmalig zu — plus 1&times; pro Quartal konkrete Praxis-Tipps für Handwerker. Kein Spam.
+      </p>
+
+      <!-- TALLY: quiz-results -->
+      <div class="bg-white rounded border border-norex-ink-200 p-8">
+        <p class="font-sans text-body-s text-norex-ink-400 text-center">Formular folgt — Tally wird hier eingebettet.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Components -->
+  <div data-component="footer"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NOSCRIPT FALLBACK
+  ═══════════════════════════════════════════ -->
+  <noscript>
+    <div style="background:#0A0A0A;color:#fff;padding:2.5rem 1.5rem;text-align:center;font-family:system-ui,sans-serif">
+      <p style="font-size:1rem;margin-bottom:1.25rem;color:#B8B5AB">
+        Dieser Selbst-Check benötigt JavaScript. Wählen Sie direkt eine Lösung:
+      </p>
+      <ul style="list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:0.75rem;align-items:center">
+        <li>
+          <a href="/leistungen/akquise" style="color:#E2231A;font-weight:700;text-decoration:none">
+            Neukundengewinnung →
+          </a>
+        </li>
+        <li>
+          <a href="/leistungen/operations" style="color:#E2231A;font-weight:700;text-decoration:none">
+            Anfragen-Automatisierung →
+          </a>
+        </li>
+        <li>
+          <a href="/leistungen/komplett" style="color:#E2231A;font-weight:700;text-decoration:none">
+            Komplettkette (A + B) →
+          </a>
+        </li>
+      </ul>
+      <p>
+        <a href="https://wa.me/4915168104758" style="color:#6B6960;font-size:0.875rem" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'whatsapp_click'})">
+          Oder direkt auf WhatsApp →
+        </a>
+      </p>
+    </div>
+  </noscript>
+
+  <!-- ═══════════════════════════════════════════
+       QUIZ LOGIC
+  ═══════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ─── Personalisierter dritter Bullet je Paket + Q2/Q3 ─── */
+    var PERSONAL_BULLET = {
+      A: {
+        empfehlung: 'Empfehlungen bleiben — mit Google gewinnen Sie jetzt auch Kunden die Sie noch nie kannten',
+        portal:     'Kein Provisions-Modell mehr — was Norex aufbaut gehört dauerhaft Ihrem Betrieb, nicht MyHammer',
+        keine:      'Viele Bezirke in Berlin & Brandenburg sind noch nicht belegt — jetzt ist der richtige Zeitpunkt'
+      },
+      B: {
+        wenig:  'Auch 3–5 verpasste Anfragen pro Woche sind über 150 verpasste Aufträge in 5 Jahren',
+        mittel: '5–15 Stunden Admin pro Woche sind über 400 Stunden im Jahr — die hier wegfallen',
+        viel:   '15 h+ pro Woche Admin bedeutet: Sie beschäftigen sich Vollzeit mit Aufwand statt mit Aufträgen'
+      },
+      Kombi: {
+        empfehlung: 'Empfehlungen + Google + automatische Bearbeitung: drei Quellen, ein System, ein Preis',
+        portal:     'Kein MyHammer mehr — eigene Google-Sichtbarkeit plus automatische Antworten ab Minute eins',
+        keine:      'Von null auf vollständig aufgestellt — Sichtbarkeit und Bearbeitung aus einer Hand'
+      }
+    };
+
+    /* ─── Result data ─── */
+    var RESULTS = {
+      A: {
+        eyebrow:   'Neukundengewinnung',
+        headline:  'Mehr Anrufe über Google.',
+        sub:       'Ihr Betrieb wird in Berlin & Brandenburg sichtbar wenn Kunden in Ihrem Bezirk suchen — Google Business Profile vollständig optimiert, wöchentliche Posts, 10–20 Profi-Fotos.',
+        bullets: [
+          'Google Business Profile vollständig eingerichtet — sichtbar wenn jemand in Berlin & Brandenburg nach Ihrem Gewerk sucht',
+          '2× Posting pro Woche + 10–20 Profi-Fotos Ihres Betriebs',
+          '90-Tage-Garantie: Ziele nicht erreicht — erster Monatsbeitrag (500 €) entfällt'
+        ],
+        price:     '1.000 €',
+        priceNote: 'Einrichtung + 500 €/Mo',
+        link:      '/leistungen/akquise',
+        linkLabel: 'Alle Details zu Neukundengewinnung',
+        paket:     'A'
+      },
+      B: {
+        eyebrow:   'Anfragen-Automatisierung',
+        headline:  'Keine verpasste Anfrage mehr.',
+        sub:       'WhatsApp, E-Mail und Formular-Anfragen werden in unter 2 Minuten beantwortet — automatisch, 24/7. Klingt wie ein Mitarbeiter.',
+        bullets: [
+          'WhatsApp, E-Mail und Formular-Anfragen — alle in unter 2 Minuten beantwortet',
+          'Automatisches Angebot als PDF — ohne dass Sie sich darum kümmern müssen',
+          'Klingt wie ein Mitarbeiter. 24/7. Auch nachts und am Wochenende.'
+        ],
+        price:     '1.500 €',
+        priceNote: 'Einrichtung + 800 €/Mo',
+        link:      '/leistungen/operations',
+        linkLabel: 'Alle Details zu Anfragen-Automatisierung',
+        paket:     'B'
+      },
+      Kombi: {
+        eyebrow:   'Kombi A+B · Komplettkette',
+        headline:  'Von Google bis Termin — aus einer Hand.',
+        sub:       'Neukundengewinnung und Anfragen-Automatisierung als vollständige Kette. Ein Einstieg. Ein Ansprechpartner. 300 € günstiger als Einzelbuchung.',
+        bullets: [
+          'Neukundengewinnung + Anfragen-Automatisierung — über Google bis automatischem Angebot',
+          '300 € günstiger als Einzelbuchung — ein Onboarding für beides',
+          '90-Tage-Garantie auf Sichtbarkeit inklusive'
+        ],
+        price:     '2.200 €',
+        priceNote: 'Einrichtung + 1.200 €/Mo',
+        link:      '/leistungen/komplett',
+        linkLabel: 'Alle Details zur Komplettkette',
+        paket:     'Kombi'
+      }
+    };
+
+    /* ─── State ─── */
+    var answers = {};
+    var currentStep = 1;
+
+    /* ─── Helpers ─── */
+    function qs(sel) { return document.querySelector(sel); }
+
+    var TOTAL_STEPS = 4;
+
+    function showStep(num) {
+      [1, 2, 3, 4].forEach(function (n) {
+        var el = document.getElementById('q' + n);
+        if (!el) return;
+        if (n === num) {
+          el.classList.remove('hidden');
+          el.removeAttribute('aria-hidden');
+          el.classList.remove('step-enter');
+          void el.offsetWidth;
+          el.classList.add('step-enter');
+        } else {
+          el.classList.add('hidden');
+          el.setAttribute('aria-hidden', 'true');
+        }
+      });
+      var resEl = document.getElementById('quiz-result');
+      if (resEl) {
+        resEl.classList.add('hidden');
+        resEl.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    function showResultStep() {
+      [1, 2, 3, 4].forEach(function (n) {
+        var el = document.getElementById('q' + n);
+        if (el) { el.classList.add('hidden'); el.setAttribute('aria-hidden', 'true'); }
+      });
+      var resEl = document.getElementById('quiz-result');
+      if (resEl) {
+        resEl.classList.remove('hidden');
+        resEl.removeAttribute('aria-hidden');
+      }
+    }
+
+    function updateProgress(step) {
+      var pct = step <= TOTAL_STEPS ? Math.round((step / TOTAL_STEPS) * 100) : 100;
+      var fill  = document.getElementById('progress-fill');
+      var lbl   = document.getElementById('step-label');
+      var pctEl = document.getElementById('step-pct');
+      if (fill)  fill.style.width  = pct + '%';
+      if (lbl)   lbl.textContent   = step <= TOTAL_STEPS ? 'Schritt ' + step + ' von ' + TOTAL_STEPS : 'Empfehlung bereit';
+      if (pctEl) pctEl.textContent = pct + ' %';
+    }
+
+    function trackEvent(evt, extra) {
+      if (window.gtag) gtag('event', evt, extra || {});
+    }
+
+    function announce(msg) {
+      var el = document.getElementById('quiz-announcement');
+      if (el) {
+        el.textContent = '';
+        setTimeout(function () { el.textContent = msg; }, 50);
+      }
+    }
+
+    /* ─── Answer handler ─── */
+    function handleAnswer(qNum, value) {
+      answers['q' + qNum] = value;
+
+      /* mark selection */
+      document.querySelectorAll('[data-q="' + qNum + '"]').forEach(function (b) {
+        b.setAttribute('aria-checked', b.dataset.value === value ? 'true' : 'false');
+      });
+
+      setTimeout(function () {
+        if (qNum < TOTAL_STEPS) {
+          currentStep = qNum + 1;
+          updateProgress(currentStep);
+          showStep(currentStep);
+          var nextBtn = qs('#q' + currentStep + ' .answer-btn');
+          if (nextBtn) nextBtn.focus();
+          var nextLbl = document.getElementById('q' + currentStep + '-label');
+          if (nextLbl) announce('Frage ' + currentStep + ': ' + nextLbl.textContent);
+        } else {
+          renderResult();
+        }
+      }, 240);
+    }
+
+    /* ─── Result renderer ─── */
+    function renderResult() {
+      var paket         = answers.q1 || 'Kombi';
+      var acquisitionType = answers.q2 || 'empfehlung';
+      var adminTime     = answers.q3 || 'mittel';
+      var teamSize      = answers.q4 || 'klein';
+      /* Großer Betrieb (10+) mit Neukunden-Problem → Kombi, da Anfrage-Volumen beide Teile rechtfertigt */
+      if (paket === 'A' && teamSize === 'gross') paket = 'Kombi';
+      /* Mittelgroßer Betrieb mit viel Admin-Aufwand → signalisiert Kapazitätsproblem, Kombi sinnvoller */
+      if (paket === 'A' && teamSize === 'mittel' && adminTime === 'viel') paket = 'Kombi';
+      var data          = RESULTS[paket] || RESULTS['Kombi'];
+
+      /* Personalisierter dritter Bullet */
+      var personalBullets = PERSONAL_BULLET[paket] || PERSONAL_BULLET['Kombi'];
+      /* Für A: Akquise-Typ; für B: Admin-Zeit; für Kombi: Akquise-Typ */
+      var personalKey = paket === 'B' ? adminTime : acquisitionType;
+      var personalBullet = personalBullets[personalKey] || data.bullets[2];
+
+      var bullets = [data.bullets[0], data.bullets[1], personalBullet];
+
+      var checkSvg = '<svg class="flex-shrink-0" width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">' +
+        '<path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '</svg>';
+
+      var bulletsHtml = bullets.map(function (b) {
+        return '<li class="flex items-start gap-3">' + checkSvg +
+          '<span class="font-sans text-norex-ink-300" style="font-size:0.875rem;line-height:1.6">' + b + '</span>' +
+          '</li>';
+      }).join('');
+
+      var waText = encodeURIComponent('Hallo, ich habe den Norex-Check gemacht und interessiere mich für: ' + data.headline);
+      var waHref = 'https://wa.me/4915168104758?text=' + waText;
+
+      var html = '<div class="result-enter">' +
+
+        /* eyebrow */
+        '<p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase">' +
+        'Ihre Empfehlung · ' + data.eyebrow + '</p>' +
+
+        /* headline */
+        '<h2 class="font-display font-bold text-white mb-4" style="font-size:clamp(1.75rem,4vw,2.25rem);line-height:1.1;letter-spacing:-0.02em">' +
+        data.headline + '</h2>' +
+
+        /* sub */
+        '<p class="font-sans text-norex-ink-300 mb-6 leading-relaxed" style="font-size:1rem">' +
+        data.sub + '</p>' +
+
+        /* bullets */
+        '<ul class="space-y-3 mb-7">' + bulletsHtml + '</ul>' +
+
+        /* pricing */
+        '<div class="border-t border-norex-ink-600 pt-6 mb-7">' +
+          '<div class="flex items-baseline gap-2">' +
+            '<span class="font-mono font-bold tabular-nums text-white" style="font-size:1.5rem;letter-spacing:-0.02em">' + data.price + '</span>' +
+            '<span class="font-sans text-norex-ink-400" style="font-size:0.875rem">' + data.priceNote + '</span>' +
+          '</div>' +
+        '</div>' +
+
+        /* CTAs */
+        '<div class="flex flex-col sm:flex-row gap-3 mb-7">' +
+          '<a href="' + data.link + '"' +
+             ' data-track="quiz_to_detail_' + paket + '"' +
+             ' class="inline-flex items-center justify-center gap-2 bg-norex-accent text-white font-sans font-bold rounded' +
+             ' focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"' +
+             ' style="font-size:0.875rem;padding:0.875rem 1.25rem;min-height:48px;transition:opacity 150ms"' +
+             ' onmouseover="this.style.opacity=\'0.88\'" onmouseout="this.style.opacity=\'1\'">' +
+            data.linkLabel +
+            '<svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</a>' +
+          '<a href="' + waHref + '" target="_blank" rel="noopener noreferrer"' +
+             ' data-track="quiz_whatsapp_' + paket + '"' +
+             ' class="inline-flex items-center justify-center gap-2 border text-white font-sans font-bold rounded' +
+             ' focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"' +
+             ' style="font-size:0.875rem;padding:0.875rem 1.25rem;min-height:48px;border-color:rgba(255,255,255,0.25);transition:background 120ms,border-color 120ms"' +
+             ' onmouseover="this.style.background=\'rgba(255,255,255,0.08)\';this.style.borderColor=\'rgba(255,255,255,0.55)\'"' +
+             ' onmouseout="this.style.background=\'\';this.style.borderColor=\'rgba(255,255,255,0.25)\'">' +
+            '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            'Direkt auf WhatsApp' +
+          '</a>' +
+        '</div>' +
+
+        /* reset */
+        '<div class="border-t border-norex-ink-600 pt-5">' +
+          '<button type="button" data-action="quiz-reset"' +
+                  ' class="font-sans text-norex-ink-400 hover:text-white rounded' +
+                  ' focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"' +
+                  ' style="font-size:0.875rem;background:transparent;cursor:pointer;padding:0;transition:color 120ms">' +
+            '← Nochmal starten' +
+          '</button>' +
+        '</div>' +
+
+      '</div>';
+
+      var resEl = document.getElementById('quiz-result');
+      if (resEl) resEl.innerHTML = html;
+
+      showResultStep();
+      updateProgress(4);
+
+      /* reveal email section */
+      var emailSec = document.getElementById('email-section');
+      if (emailSec) emailSec.style.display = '';
+
+      /* GA4 dataLayer */
+      trackEvent('quiz_completed', {
+        quiz_paket:    paket,
+        quiz_akquise:  answers.q2 || null,
+        quiz_aufwand:  answers.q3 || null,
+        quiz_team:     answers.q4 || null
+      });
+
+      /* announce for screen reader */
+      announce('Ihre Empfehlung ist fertig: ' + data.headline);
+
+      /* wire cross-link tracking on newly rendered links */
+      wireCrosslinkTracking();
+
+      /* scroll to result */
+      var section = document.getElementById('quiz-section');
+      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /* ─── Reset ─── */
+    function resetQuiz() {
+      answers = {};
+      currentStep = 1;
+      [1, 2, 3, 4].forEach(function (n) {
+        document.querySelectorAll('[data-q="' + n + '"]').forEach(function (b) {
+          b.setAttribute('aria-checked', 'false');
+        });
+      });
+      updateProgress(1);
+      showStep(1);
+      var emailSec = document.getElementById('email-section');
+      if (emailSec) emailSec.style.display = 'none';
+      var firstBtn = qs('#q1 .answer-btn');
+      if (firstBtn) firstBtn.focus();
+    }
+
+    /* ─── Cross-link tracking ─── */
+    function wireCrosslinkTracking() {
+      document.querySelectorAll('[data-track]').forEach(function (el) {
+        if (el._trackWired) return;
+        el._trackWired = true;
+        el.addEventListener('click', function () {
+          trackEvent('crosslink_click', { crosslink_id: el.dataset.track, crosslink_from: window.location.pathname, crosslink_to: el.getAttribute('href') || '' });
+        });
+      });
+    }
+
+    /* ─── Event delegation ─── */
+    document.addEventListener('click', function (e) {
+      /* answer button */
+      var btn = e.target.closest('.answer-btn');
+      if (btn && btn.dataset.q && btn.dataset.value) {
+        handleAnswer(parseInt(btn.dataset.q, 10), btn.dataset.value);
+        return;
+      }
+
+      /* reset button */
+      if (e.target.closest('[data-action="quiz-reset"]')) {
+        resetQuiz();
+      }
+    });
+
+    /* ─── Keyboard navigation (arrow keys in radiogroup) ─── */
+    document.addEventListener('keydown', function (e) {
+      var btn = e.target.closest('.answer-btn');
+      if (!btn) return;
+      var q = btn.dataset.q;
+      var groupEl = document.getElementById('q' + q);
+      var siblings = groupEl
+        ? Array.from(groupEl.querySelectorAll('.answer-btn'))
+        : [];
+      var idx = siblings.indexOf(btn);
+
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        siblings[(idx + 1) % siblings.length].focus();
+      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        siblings[(idx - 1 + siblings.length) % siblings.length].focus();
+      } else if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+
+    /* ─── Static cross-link tracking (breadcrumb etc.) ─── */
+    wireCrosslinkTracking();
+
+    /* ─── Init ─── */
+    updateProgress(1);
+    showStep(1);
+
+  })();
+  </script>
+
+  <script src="/assets/loader.js"></script>
+</body>
+</html>

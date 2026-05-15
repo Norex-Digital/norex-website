@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="460" height="120" role="img" aria-label="Norex Logo">
+  <title>Norex Logo (Symbol + Wortmarke)</title>
+  <!-- Symbol -->
+  <g transform="translate(0,10)">
+    <rect x="0" y="0" width="100" height="100" rx="6" ry="6" fill="#0A0A0A"/>
+    <text x="50" y="72" text-anchor="middle"
+          font-family="'Geist', 'Inter', system-ui, sans-serif"
+          font-weight="800" font-size="68" fill="#FFFFFF" letter-spacing="-0.02em">N</text>
+    <polygon points="62,0 100,0 100,38 92,42 56,6" fill="#E2231A"/>
+  </g>
+  <!-- Wortmarke NOREX -->
+  <text x="128" y="80"
+        font-family="'Geist', 'Inter', system-ui, sans-serif"
+        font-weight="700" font-size="64" fill="#0A0A0A" letter-spacing="-0.01em">NOREX</text>
+</svg>
