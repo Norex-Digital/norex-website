@@ -9,7 +9,7 @@ var klaroConfig = {
   translations: {
     de: {
       consentNotice: {
-        description: 'Wir nutzen Google Analytics um zu verstehen, welche Inhalte unseren Besuchern helfen. Keine Weitergabe an Dritte. Details in unserer <a href="/datenschutz" class="klaro-link">Datenschutzerklärung</a>.',
+        description: 'Wir nutzen Google Analytics um zu verstehen, welche Inhalte unseren Besuchern helfen. Keine Weitergabe an Dritte. Details in unserer Datenschutzerklärung.',
       },
       consentModal: {
         title: 'Cookie-Einstellungen',
