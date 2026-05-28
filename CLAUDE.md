@@ -38,10 +38,16 @@ Plugin installieren: `/plugin install frontend-design@claude-code-plugins`
 - Platzhalter-Bilder: `https://placehold.co/BREITExHÖHE`
 - Mobile-first, responsiv
 
-## Marken-Assets
-- Vor dem Design immer den `brand_assets/`-Ordner prüfen. Dort können Logos, Farbpaletten, Style Guides oder Bilder liegen.
-- Vorhandene Assets verwenden. Keine Platzhalter wenn echte Assets verfügbar sind.
-- Logo vorhanden → verwenden. Farbpalette definiert → exakt diese Werte nutzen, keine eigenen Farben erfinden.
+## Design-System (Norex Brand)
+
+**Primäre Quelle: `/norex-design` Skill** — enthält alle Token, Komponenten-Specs und CSS-Snippets für das Norex-Design-System. Vor jeder Design-Arbeit aktivieren.
+
+- **Farben, Fonts, Spacing, Radii, Motion:** → `~/.claude/skills/norex-design/references/tokens.md`
+- **Button, Card, Input, Nav, FAQ Specs:** → `~/.claude/skills/norex-design/references/components.md`
+- **CSS Custom Properties + Tailwind Config (copy-paste):** → `~/.claude/skills/norex-design/references/platform-mapping.md`
+- **Logos, Fotos, Mood-Boards:** → `brand_assets/logo/`, `brand_assets/team/` (weiterhin aktiv)
+
+**Nie mehr manuell in `brand_assets/colors.md` oder `brand_assets/typography.md` nachschlagen** — alles ist im Skill konsolidiert.
 
 ## Anti-Generisch-Vorgaben
 - **Farben:** Nie die Standard-Tailwind-Palette verwenden (indigo-500, blue-600 etc.). Eine eigene Markenfarbe wählen und davon ableiten.
@@ -72,34 +78,112 @@ Plugin installieren: `/plugin install frontend-design@claude-code-plugins`
 
 ---
 
-## Deploy Configuration (Stand 2026-05-15)
+## Deploy Configuration (Stand 2026-05-16)
 
 - **Platform:** Vercel
 - **Vercel-Projekt-ID:** `prj_W8ADfFRtg4BhfgNySfnJSJNyYbj5` (bestätigt in `.vercel/project.json`)
 - **Vercel-Org-ID:** `team_sK7m9kRhrP5QCZEFOjt0qPLk`
-- **Produktions-URL:** norex-digital.de _(Domain noch nicht verbunden)_
+- **GitHub-Repo:** `github.com/Norex-Digital/norex-website` (public, aktiv)
+- **Live-URL:** `norex-digital.vercel.app` ✅ (Auto-Deploy aktiv via GitHub main-Branch)
+- **Custom Domain:** norex-digital.de ⬜ (noch nicht verbunden — DNS bei United Domains)
 - **Projekt-Typ:** Static HTML + Tailwind CDN (kein Build-Step, kein Framework)
-- **Git-Repo:** ⚠️ noch nicht initialisiert — kein `.git` vorhanden
-- **GitHub:** ⚠️ noch nicht verbunden — Auto-Deploy noch nicht aktiv
 
-### Nächste Schritte für vollständiges Deploy-Setup
-1. `git init` im Projekt-Root
-2. GitHub-Repo anlegen: `github.com/[org]/norex-website`
-3. `git remote add origin https://github.com/[org]/norex-website.git`
-4. Vercel im Dashboard mit GitHub-Repo verbinden
-5. Domain norex-digital.de in Vercel verbinden
+### Deploy-Workflow (aktiv)
 
-### Geplante Branch-Strategie (nach Git-Setup)
+Jede Änderung an `main` → Vercel deployed automatisch innerhalb ~30 Sek.
+
+1. Änderungen lokal bearbeiten
+2. `/ship` aufrufen → erstellt Commit + Push
+3. Vercel deployed automatisch → `norex-digital.vercel.app` live
+
+### Branch-Strategie
 
 | Branch | Zweck | Vercel |
 |---|---|---|
-| `main` | Live / Production | → Production Deploy |
-| `dev` | Aktive Entwicklung, Staging | → Preview-URL |
-| `feature/*` | Einzelne größere Features | → Preview-URL |
+| `main` | Live / Production | → Production Deploy (auto) |
+| `dev` | Aktive Entwicklung | → Preview-URL |
+| `feature/*` | Größere Features | → Preview-URL |
 
-**Workflow nach Setup:**
-1. Änderungen in `dev` pushen → Vercel Preview-URL
-2. Preview abnehmen → PR `dev` → `main` → Production live
+### Offene Deploy-Aufgaben
+- [ ] Domain norex-digital.de in Vercel verbinden + DNS bei United Domains umstellen
+- [ ] Google Search Console einrichten + Domain verifizieren
+- [ ] Sitemap in GSC einreichen (`norex-digital.de/sitemap.xml`)
+- [ ] GA4: Maurice's Home-IP in Internal Traffic Filter eintragen
+- [ ] GA4: Conversion-Events als Schlüsselereignisse markieren (nach ersten echten Triggern)
+- [x] `hue` ausgeführt → `/norex-design` Skill generiert in `~/.claude/skills/norex-design/` ✅
+
+---
+
+## Eigene Website-Skills
+
+| Skill | Aufruf | Wofür |
+|---|---|---|
+| `norexwebsite` | `/norexwebsite` | Gezieltes Overhaul der Norex-Website nach Rebranding 27.05.2026. 3 Blöcke: Audit + Context-Vorbereitung → Produktion P0–P4 → Launch-Gate. |
+
+Trigger: „norexwebsite", „Norex Website updaten", „Website Overhaul starten"
+
+Skill-Dateien: `.claude/skills/norexwebsite/`
+
+---
+
+## Skill Routing — Norex Website
+
+Wenn eine Aufgabe einem Skill entspricht, diesen direkt aufrufen. Nicht raten, nicht manuell lösen wenn ein Skill existiert.
+
+**Vollständige Skill-Sequenzen (welche Skills in welcher Reihenfolge):** → [docs/skill-workflows.md](docs/skill-workflows.md)
+
+| Aufgabe | Skill / Tool | Hinweis |
+|---|---|---|
+| SEO-Audit einer Seite | `superseo/page-audit` | Ersetzt `copythat/seo-audit` — googelt selbst, liest Top-3-Konkurrenten |
+| Technisches Audit (Speed, Schema, Crawler) | `claude-seo/seo-technical` | Core Web Vitals, GPTBot, IndexNow |
+| On-Page Copy auf Deutsch schreiben | `copythat/seo-web-copy` | Einziger Skill mit nativer Deutsch-Unterstützung + Brand Voice |
+| Schema.org JSON-LD einbauen | `claude-seo/seo-schema` | LocalBusiness, Service, FAQPage |
+| Keyword-Strategie / neue Landing Pages | `/plan-ceo-review` + `/research` | Strategie-Ebene — Wellen-Plan, Keyword-Priorisierung |
+| GSC-Daten analysieren (Rankings, CTR) | `AminForou/mcp-gsc` | Erst aktiv wenn Domain norex-digital.de live + GSC verifiziert |
+| Competitor-Keywords beobachten | `egebese/seo-research-mcp` | Ahrefs-Daten, ~5€/Monat CAPTCHA-Solver |
+| Bilder / Videos generieren | Higgsfield MCP (`mcp__higgsfield__generate_image`, `generate_video`) | Für Hero-Bilder, Team-Fotos etc. |
+| Commit + Deploy | `/ship` | Erstellt Commit + Push → Vercel deployed automatisch |
+| Strategie / Scope-Entscheidungen | `/plan-ceo-review` | Für größere Richtungsentscheidungen zur Website |
+
+### Design Skills (neu installiert)
+
+| Aufgabe | Skill | Hinweis |
+|---|---|---|
+| Frontend-Code schreiben (allgemein) | `ui-ux-pro-max` | Auto-aktiviert bei UI-Arbeit — 67 Styles, 161 Paletten, Tailwind-nativ |
+| Anti-Slop-Overlay | `taste` | Als Zusatz zu ui-ux-pro-max wenn generisches Output verhindert werden soll |
+| Neues Design von Grund auf | `design-consultation` | Erstellt DESIGN.md als Design-Quelle — vor größeren Redesigns |
+| Design-Varianten explorieren | `design-shotgun` | Mehrere Varianten generieren + vergleichen |
+| Design-Kritik auf live Code | `design-review` | Nach dem Bauen — findet Spacing/Hierarchy/Slop-Probleme |
+| Design-Plan reviewen (vor Umsetzung) | `plan-design-review` | Vor dem Bauen |
+| Prototyp / Animation | `huashu-design` | HTML-Prototyping, Motion Design, GSAP-Animationen |
+| Tailwind-Komponenten schnell | `shadcnblocks-skill` | 1.338 vorgefertigte Tailwind-Blöcke |
+| Norex Design-System anwenden | `/norex-design` | **Primärer Design-Skill — vor jeder UI-Arbeit aktivieren** |
+| Brand-Token-System neu generieren | `hue` | Nur bei größeren Brand-Änderungen nötig — `norex-design` Skill updaten |
+| UI-Details polieren (Shadows, Radius, Animationen) | `boraoztunc/make-interfaces-feel-better` | Nach dem Bauen — Typography, Surfaces, Micro-Interactions |
+
+### Content, Wording & Marketing Skills
+
+| Aufgabe | Skill | Hinweis |
+|---|---|---|
+| Brand Voice extrahieren / anwenden | `copythat/brand-voice` | Vor jeder größeren Copy-Arbeit — Norex Tonalität festhalten |
+| Seiten-Copy schreiben (Startseite, Leistungen, Über uns) | `copythat/seo-web-copy` | Deutsch, SEO-optimiert, Brand Voice integriert |
+| Copy schreiben (Conversion-fokus, englisch-first) | `boraoztunc/copywriting` | Ergänzt copythat mit strikter Conversion-Logik — Output dann via copythat auf Deutsch |
+| Headlines entwickeln | `copythat/headline-writer` | 10 Varianten mit Named Frameworks (PAS, AIDA etc.) |
+| Copy nach Ogilvy-Prinzipien prüfen / schreiben | `boraoztunc/ogilvy` | Direct-Response-Philosophie: Positioning → Promise → Headline → Body |
+| AI-Floskeln aus fertigem Copy entfernen | `boraoztunc/stop-slop` | Overlay nach jedem copythat-Output — entfernt Füllphrasen, Passive, Klischees |
+| Copy auf Qualität prüfen | `copythat/copy-audit` | Scoring auf Klarheit, SEO, LLM-Readiness, Conversion |
+| Conversion-Rate einer Seite optimieren | `boraoztunc/page-cro` | CRO-Analyse: Value Prop, CTA, Trust Signals, Friction — nach dem Bauen |
+| Content-Strategie planen (Blog, Themen-Cluster) | `boraoztunc/content-strategy` | Was soll wann zu welchem Zweck erstellt werden |
+| Copy für KI-Zitierbarkeit optimieren (AEO/GEO) | `copythat/llm-optimisation` | Für ChatGPT/Perplexity-Sichtbarkeit |
+| Landing Page Struktur (conversion-optimiert) | `copythat/landing-page` | Struktur + Copy für neue Landing Pages |
+| E-Mail-Sequenz (Onboarding, Sales, Re-engagement) | `copythat/email-sequence` | Multi-Step-Sequenzen auf Deutsch |
+| Ad Copy (Google, Meta, LinkedIn) | `copythat/ad-copy` | Innerhalb Plattform-Limits, auf Deutsch |
+| Komplette Landing Page (Copy + Design + Build) | `landing-page-factory` | Volle Pipeline — nutzt intern copythat + design-skills |
+| Positionierung / Differenzierung definieren | `startup-positioning` | April-Dunford-Framework — für Messaging-Grundlage |
+| Go-to-Market Strategie | `gtm-strategy` | Channels, Messaging, Launch-Timeline |
+| Idee → Briefing (vor Copy-Arbeit) | `brainstorming` | Pflicht bevor Landing Pages oder Kampagnen gebaut werden |
+
+**Wichtig:** `copythat/seo-audit` NICHT mehr verwenden — durch `superseo/page-audit` ersetzt.
 
 ---
 
