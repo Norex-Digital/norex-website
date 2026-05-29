@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mehr Aufträge für Handwerk & Reinigung Berlin · Norex | 90-Tage-Garantie</title>
-  <meta name="description" content="Norex bringt Handwerks- und Reinigungsbetriebe auf Google — mehr Sichtbarkeit, mehr Anfragen. Berlin & Brandenburg. 90-Tage-Garantie. Sichtbarkeitscheck kostenlos.">
+  <title>Mehr Aufträge Handwerk Berlin · Norex | 90-Tage-Garantie</title>
+  <meta name="description" content="Norex bringt Handwerks- und Reinigungsbetriebe in Berlin auf Google — mehr Aufträge, mehr Sichtbarkeit. 90-Tage-Garantie. Sichtbarkeitscheck kostenlos.">
   <link rel="canonical" href="https://norex-digital.de/">
 
   <!-- Open Graph -->
@@ -242,6 +242,9 @@
         "areaServed": { "@type": "Place", "name": "Berlin & Brandenburg" },
         "offers": {
           "@type": "Offer",
+          "price": "450",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
           "description": "700 € Einrichtung + 450 €/Monat (Bundle alle 3 Kanäle)",
           "priceSpecification": [
             { "@type": "UnitPriceSpecification", "price": "700", "priceCurrency": "EUR", "unitText": "Einrichtung" },
@@ -649,15 +652,21 @@
 
         <!-- VIEW: Karten -->
         <div>
-        <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-6 md:gap-8 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-6 md:gap-8 items-stretch">
 
           <!-- Karte A: Neukundengewinnung -->
-          <div class="relative flex flex-col bg-white border border-norex-ink-200 p-8 h-full"
-            style="transition:transform 250ms cubic-bezier(0.34,1.56,0.64,1)"
-            onmouseover="this.style.transform='translateY(-4px)'"
-            onmouseout="this.style.transform=''">
+          <div class="relative flex flex-col bg-white border-t-2 border-norex-accent p-8 h-full"
+            style="border-left:1px solid #E8E5DD;border-right:1px solid #E8E5DD;border-bottom:1px solid #E8E5DD;
+                   box-shadow:0 1px 3px rgba(10,10,10,0.05),0 4px 20px rgba(226,35,26,0.07);
+                   transition:transform 250ms cubic-bezier(0.34,1.56,0.64,1),box-shadow 250ms cubic-bezier(0.34,1.56,0.64,1)"
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(226,35,26,0.14),0 2px 6px rgba(10,10,10,0.08)'"
+            onmouseout="this.style.transform='';this.style.boxShadow='0 1px 3px rgba(10,10,10,0.05),0 4px 20px rgba(226,35,26,0.07)'"
+            onmousedown="this.style.transform='translateY(-1px)'"
+            onmouseup="this.style.transform='translateY(-4px)'"
+            onfocus="this.style.outline='2px solid #E2231A';this.style.outlineOffset='3px'"
+            onblur="this.style.outline=''">
             <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-3">Mehr Anrufe über Google</p>
-            <h3 class="font-display font-bold text-display-s text-norex-primary mb-2">Neukundengewinnung</h3>
+            <h3 class="font-display font-bold text-display-s text-norex-primary mb-2" style="text-wrap:balance">Neukundengewinnung</h3>
             <p class="font-sans text-body text-norex-ink-500 mb-6 leading-relaxed">Mehr Anrufe über Google — Ihr Betrieb erscheint dort wo Kunden suchen.</p>
 
             <div class="border-t border-norex-ink-200 pt-6 mb-6">
@@ -707,11 +716,14 @@
 
           <!-- Karte B: Ads-Beschleuniger -->
           <div class="relative flex flex-col bg-norex-primary p-8 h-full"
-            style="transition:transform 250ms cubic-bezier(0.34,1.56,0.64,1)"
+            style="box-shadow:inset 0 1px 0 rgba(255,255,255,0.07);
+                   transition:transform 250ms cubic-bezier(0.34,1.56,0.64,1)"
             onmouseover="this.style.transform='translateY(-4px)'"
-            onmouseout="this.style.transform=''">
+            onmouseout="this.style.transform=''"
+            onmousedown="this.style.transform='translateY(-1px)'"
+            onmouseup="this.style.transform='translateY(-4px)'">
             <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-3">Nach 60–90 Tagen — als Upsell</p>
-            <h3 class="font-display font-bold text-display-s text-white mb-2">Ads-Beschleuniger</h3>
+            <h3 class="font-display font-bold text-display-s text-white mb-2" style="text-wrap:balance">Ads-Beschleuniger</h3>
             <p class="font-sans text-body text-norex-ink-300 mb-6 leading-relaxed">LSA + Meta Ads + Google Search — gezielt steuern wann und wie viele Anfragen reinkommen.</p>
             <div class="border-t border-norex-ink-600 pt-6 mb-6">
               <div class="flex items-baseline gap-1 mb-1.5">
