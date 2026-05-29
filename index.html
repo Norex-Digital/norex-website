@@ -142,11 +142,6 @@
       box-shadow: 0 1px 0 rgba(10,10,10,0.08), 0 2px 8px rgba(10,10,10,0.04);
     }
 
-    /* Pricing-View Toggle */
-    .pricing-view { display: none; }
-    .pricing-view.active { display: block; }
-    .pricing-tab-btn { transition: background 150ms, color 150ms; }
-    .pricing-tab-btn.active { background: #0A0A0A; color: #FFFFFF; }
     .feat-row:hover td { background: #F8F7F4; }
     .feat-row td { transition: background 150ms; }
   </style>
@@ -165,7 +160,7 @@
           "@type": "ImageObject",
           "url": "https://norex-digital.de/brand_assets/logo/favicon.svg"
         },
-        "description": "Norex bringt Handwerks- und Reinigungsbetriebe in Berlin & Brandenburg auf Google und beantwortet Anfragen automatisch."
+        "description": "Norex bringt Handwerks- und Reinigungsbetriebe auf Google — Website, Local SEO, messbar mehr Anfragen. Berlin & Brandenburg."
       },
       {
         "@type": "LocalBusiness",
@@ -359,7 +354,7 @@
           </h1>
 
           <p class="font-sans text-body-l text-norex-ink-500 mb-3 max-w-xl" style="line-height:1.7">
-            Norex bringt Handwerks- und Reinigungsbetriebe auf Google — Website, Local SEO und mehr Anfragen aus einer Hand.
+            Norex bringt Handwerks- und Reinigungsbetriebe auf Google — Website, Local SEO, messbar mehr Anfragen.
           </p>
           <p class="font-sans text-body-l text-norex-ink-500 mb-8 max-w-xl" style="line-height:1.7">
             <strong class="font-medium text-norex-ink-600">Berlin &amp; Brandenburg. Garantiert messbar in 90 Tagen.</strong>
@@ -652,19 +647,9 @@
           </p>
         </div>
 
-        <!-- Pricing-Toggle -->
-        <div class="flex justify-center mb-12">
-          <div class="inline-flex border border-norex-ink-200 p-1 gap-0.5">
-            <button class="pricing-tab-btn active font-sans text-xs uppercase tracking-wider px-5 py-2.5"
-                    onclick="showPricingView('cards', this)">Karten-Ansicht</button>
-            <button class="pricing-tab-btn font-sans text-xs uppercase tracking-wider px-5 py-2.5"
-                    onclick="showPricingView('matrix', this)">Vergleichs-Tabelle</button>
-          </div>
-        </div>
-
         <!-- VIEW: Karten -->
-        <div id="pricing-view-cards" class="pricing-view active">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start">
+        <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-6 md:gap-8 items-start">
 
           <!-- Karte A: Neukundengewinnung -->
           <div class="relative flex flex-col bg-white border border-norex-ink-200 p-8 h-full"
@@ -697,7 +682,6 @@
               <li class="flex items-start gap-2.5"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#3A3833" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body-s text-norex-ink-500">10–20 Profi-Fotos + 2× Google-Posts pro Woche</span></li>
               <li class="flex items-start gap-2.5"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#3A3833" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body-s text-norex-ink-500">Bewertungs-Einrichtung: QR-Karten + Antwort-Vorlagen</span></li>
               <li class="flex items-start gap-2.5"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#3A3833" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body-s text-norex-ink-500">Website neu gebaut oder bestehende optimiert</span></li>
-              <li class="flex items-start gap-2.5"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#3A3833" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body-s text-norex-ink-500">Local Ads (Google Verified): Einrichtung + Monitoring</span></li>
               <li class="flex items-start gap-2.5"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-0.5" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#3A3833" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body-s text-norex-ink-500">Monatlicher Report + 30-Min-Call mit Maurice oder Noah</span></li>
             </ul>
 
