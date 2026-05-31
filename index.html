@@ -373,16 +373,17 @@
               onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(226,35,26,0.35)'"
               onmouseout="this.style.transform='';this.style.boxShadow='0 4px 16px rgba(226,35,26,0.25)'"
               onmousedown="this.style.transform='translateY(0)'">
-              Was bringt das für meinen Betrieb?
+              Sichtbarkeitscheck starten
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a href="https://calendly.com/office-norexai/30min" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 border-2 border-norex-primary text-norex-primary font-sans font-bold text-body px-6 py-4 rounded
-                     focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"
-              style="transition:transform 150ms cubic-bezier(0.34,1.56,0.64,1),background 150ms,color 150ms"
-              onmouseover="this.style.transform='translateY(-2px)';this.style.background='#0A0A0A';this.style.color='#FFFFFF'"
-              onmouseout="this.style.transform='';this.style.background='';this.style.color=''"
-              onmousedown="this.style.transform='translateY(0)'" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'calendly_click'})">
+              class="inline-flex items-center gap-2 font-sans font-semibold text-body text-norex-ink-500
+                     underline underline-offset-[3px] decoration-norex-ink-300
+                     focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm"
+              style="transition:color 150ms,text-decoration-color 150ms"
+              onmouseover="this.style.color='#0A0A0A';this.style.textDecorationColor='#0A0A0A'"
+              onmouseout="this.style.color='';this.style.textDecorationColor=''"
+              onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'calendly_click'})">
               Kostenlos beraten lassen
             </a>
           </div>
@@ -767,7 +768,7 @@
              style="transition:color 150ms"
              onmouseover="this.style.color='#0A0A0A'"
              onmouseout="this.style.color=''">
-            Neugierig wie Einrichtung und Start konkret aussehen?
+            So läuft die Einrichtung ab
             <svg width="11" height="11" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </p>
@@ -790,7 +791,7 @@
             class="inline-flex items-center gap-2 font-sans font-semibold text-body-s text-norex-accent whitespace-nowrap"
             style="transition:gap 150ms cubic-bezier(0.34,1.56,0.64,1)"
             onmouseover="this.style.gap='10px'" onmouseout="this.style.gap=''">
-            Unsicher welches Angebot passt? — 4 Fragen
+            In 4 Fragen zum richtigen Angebot
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
