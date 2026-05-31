@@ -58,11 +58,17 @@
     "@graph": [
       { "@type": "LocalBusiness", "@id": "https://norex-digital.de/#organization", "name": "Norex", "url": "https://norex-digital.de", "areaServed": ["Berlin","Brandenburg"], "foundingDate": "2026" },
       { "@type": "WebPage", "@id": "https://norex-digital.de/so-laeuft-es-ab", "url": "https://norex-digital.de/so-laeuft-es-ab", "name": "So läuft das ab — Einstieg bei Norex", "isPartOf": { "@id": "https://norex-digital.de/#organization" } },
-      { "@type": "HowTo", "name": "Norex Einstieg für Reinigungs- und Gartenservice-Betriebe", "totalTime": "P90D", "step": [
-        { "@type": "HowToStep", "name": "Start & Kennenlernen", "text": "Erstgespräch, Google-Profil-Status, Konkurrenz-Vergleich, Zielwerte fixieren.", "position": 1 },
-        { "@type": "HowToStep", "name": "Aufbau & Schaltung", "text": "Google-Profil schärfen, Website optimieren, Local SEO aufsetzen, live schalten.", "position": 2 },
-        { "@type": "HowToStep", "name": "Messung & Optimierung", "text": "Täglich messen, justieren, monatliche Auswertung, 90-Tage-Garantie-Reporting.", "position": 3 }
-      ]},
+      {
+        "@type": "Service",
+        "@id": "https://norex-digital.de/so-laeuft-es-ab#service",
+        "name": "Norex Digitalisierungs-Prozess für Reinigung & Gartenservice",
+        "url": "https://norex-digital.de/so-laeuft-es-ab",
+        "serviceType": "Digitalisierung & Google-Sichtbarkeit für Reinigung & Gartenservice",
+        "description": "Norex digitalisiert Reinigungs- und Gartenservice-Betriebe in 3 Phasen: Phase 1 — Start & Kennenlernen (Erstgespräch, Google-Profil-Status, Konkurrenz-Vergleich, Zielwerte fixieren). Phase 2 — Aufbau & Schaltung (Google-Profil schärfen, Website optimieren, Local SEO aufsetzen, live schalten). Phase 3 — Messung & Optimierung (täglich messen, justieren, monatliche Auswertung, 90-Tage-Garantie-Reporting).",
+        "provider": { "@id": "https://norex-digital.de/#organization" },
+        "areaServed": ["Berlin", "Brandenburg"],
+        "termsOfService": "https://norex-digital.de/garantie"
+      },
       { "@type": "BreadcrumbList", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://norex-digital.de/" },
         { "@type": "ListItem", "position": 2, "name": "So läuft das ab", "item": "https://norex-digital.de/so-laeuft-es-ab" }
