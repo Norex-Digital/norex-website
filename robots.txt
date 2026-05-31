@@ -9,4 +9,24 @@ Disallow: /node_modules/
 Disallow: /temporary screenshots/
 Disallow: /assets/components/
 
+# ===== AI-/LLM-Crawler — explizit erlaubt (AEO/LLM-Sichtbarkeit), gleiche Sperren wie * =====
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: Bytespider
+Allow: /
+Disallow: /archive/
+Disallow: /brand_assets/
+Disallow: /test-versions/
+Disallow: /.claude/
+Disallow: /node_modules/
+Disallow: /temporary screenshots/
+Disallow: /assets/components/
+
 Sitemap: https://norex-digital.de/sitemap.xml
