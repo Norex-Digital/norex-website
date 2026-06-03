@@ -1,16 +1,11 @@
 User-agent: *
 Allow: /
 
-Disallow: /archive/
 Disallow: /brand_assets/
-Disallow: /test-versions/
 Disallow: /.claude/
 Disallow: /node_modules/
-Disallow: /temporary screenshots/
 Disallow: /assets/components/
 Disallow: /assets/templates/
-Disallow: /preview-
-Disallow: /premium-fensterreinigung/
 
 # ===== AI-/LLM-Crawler — explizit erlaubt (AEO/LLM-Sichtbarkeit), gleiche Sperren wie * =====
 User-agent: GPTBot
@@ -24,15 +19,10 @@ User-agent: Google-Extended
 User-agent: CCBot
 User-agent: Bytespider
 Allow: /
-Disallow: /archive/
 Disallow: /brand_assets/
-Disallow: /test-versions/
 Disallow: /.claude/
 Disallow: /node_modules/
-Disallow: /temporary screenshots/
 Disallow: /assets/components/
 Disallow: /assets/templates/
-Disallow: /preview-
-Disallow: /premium-fensterreinigung/
 
 Sitemap: https://norex-digital.de/sitemap.xml

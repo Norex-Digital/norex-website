@@ -23,7 +23,7 @@ Plugin installieren: `/plugin install frontend-design@claude-code-plugins`
 - Wenn der Server bereits läuft, keine zweite Instanz starten.
 
 ## Screenshot-Workflow
-- Puppeteer ist installiert unter `C:/Users/nateh/AppData/Local/Temp/puppeteer-test/`. Chrome-Cache unter `C:/Users/nateh/.cache/puppeteer/`.
+- Puppeteer ist über `screenshot.mjs` eingebunden (Chrome-Cache im User-Profil). Funktioniert out-of-the-box — `screenshot.mjs` unverändert nutzen.
 - **Immer von localhost screenshotten:** `node screenshot.mjs http://localhost:3000`
 - Screenshots werden automatisch gespeichert unter `./temporary screenshots/screenshot-N.png` (automatisch hochgezählt, nie überschrieben).
 - Optionales Label: `node screenshot.mjs http://localhost:3000 label` → speichert als `screenshot-N-label.png`
@@ -78,39 +78,66 @@ Plugin installieren: `/plugin install frontend-design@claude-code-plugins`
 
 ---
 
-## Deploy Configuration (Stand 2026-05-16)
+## Deploy Configuration (Stand 2026-06-03)
 
-- **Platform:** Vercel
-- **Vercel-Projekt-ID:** `prj_W8ADfFRtg4BhfgNySfnJSJNyYbj5` (bestätigt in `.vercel/project.json`)
-- **Vercel-Org-ID:** `team_sK7m9kRhrP5QCZEFOjt0qPLk`
-- **GitHub-Repo:** `github.com/Norex-Digital/norex-website` (public, aktiv)
-- **Live-URL:** `norex-digital.vercel.app` ✅ (Auto-Deploy aktiv via GitHub main-Branch)
-- **Custom Domain:** norex-digital.de ⬜ (noch nicht verbunden — DNS bei United Domains)
-- **Projekt-Typ:** Static HTML + Tailwind CDN (kein Build-Step, kein Framework)
+- **Platform:** Vercel — Static HTML + Tailwind CDN (kein Build-Step, kein Framework)
+- **Live:** **https://norex-digital.de** ✅ (Custom-Domain verbunden, SSL, www→308→apex, alle Canonicals/Sitemap auf apex no-slash). Fallback: `norex-digital.vercel.app`
+- **Vercel-Projekt:** **`norex-digital`** (persönlicher Hobby-Account „honigdachs1701-3151s-projects") — **NICHT** das alte Projekt „norex-website".
+- **Deploy:** Push auf `main` → Vercel Auto-Deploy (~30 Sek), läuft über die **GitHub-Integration** (nicht die Vercel-CLI).
+- **GitHub:** `github.com/Norex-Digital/norex-website` (Branch `main` → Production).
+- **⚠️ Bekannte Diskrepanz:** `.vercel/project.json` zeigt noch auf das ALTE Projekt (`team_sK7m9…/prj_W8AD…` = „norex-website"). Für GitHub-Deploys irrelevant. Falls je die `vercel`-CLI genutzt wird: vorher `vercel link` neu auf `norex-digital` verbinden.
 
-### Deploy-Workflow (aktiv)
+### Ship-Workflow (aktiv)
+1. Änderungen lokal bearbeiten → verifizieren (Screenshots / curl)
+2. **Nur öffentliche Dateien stagen** — KEINE internen Docs (`docs/pseo_*`, `assets/templates/`, `tasks/`)
+3. `git commit` + `git push origin main` → Vercel deployed automatisch
+> Das gstack-`/ship`-Skill ist PR-/Test-basiert (Feature-Branch → Eng-Review → PR) und passt **nicht** zu dieser statischen Main-Deploy-Site → **Direkt-Commit auf `main`** nutzen.
 
-Jede Änderung an `main` → Vercel deployed automatisch innerhalb ~30 Sek.
+### Status (2026-06-03)
+- [x] Domain `norex-digital.de` live (Vercel + DNS United Domains: A `@`→216.198.79.1, CNAME `www`→…vercel-dns-017)
+- [x] Google Search Console verifiziert (sc-domain, DNS-TXT) + Sitemap eingereicht
+- [x] GA4 Internal-Traffic-Filter (Maurice Home-IP) aktiv
+- [x] PSEO Wissen-Silo live (17 Seiten) + Perfekt-Audit (DSGVO/Stale-Concept/Schema/A11y) live
+- [ ] **GA4: `phone_call` + `form_submit_success` als Schlüsselereignisse markieren** (`generate_lead` ✓)
+- [ ] **Rechtstexte (Datenschutz/Impressum) anwaltlich gegenlesen**
+- [x] `hue` → `/norex-design` Skill generiert ✅
+- Geflaggt/optional: Tailwind-CDN→CSS-Bundle · CSP · HSTS-preload · Strang-1 (Kunden-Location-Template) · IndexNow
 
-1. Änderungen lokal bearbeiten
-2. `/ship` aufrufen → erstellt Commit + Push
-3. Vercel deployed automatisch → `norex-digital.vercel.app` live
+---
 
-### Branch-Strategie
+## Multi-Maschinen-Workflow — Google Drive + Git (KRITISCH, Stand 2026-06-03)
 
-| Branch | Zweck | Vercel |
-|---|---|---|
-| `main` | Live / Production | → Production Deploy (auto) |
-| `dev` | Aktive Entwicklung | → Preview-URL |
-| `feature/*` | Größere Features | → Preview-URL |
+Der Workspace liegt in **Google Drive** und wird von **mehreren Geräten** genutzt (Founder = PC, Noah = Mac). Drive bleibt (Multi-Geräte-Zugriff ist gewollt). Aber: **Git-Repo + Drive-Sync + gleichzeitiges Editieren auf zwei Geräten = Korruption.** Am 2026-06-03 passiert: ~20 Dateien auf 0 Bytes truncated + Drive legte Konflikt-Kopien „`dateiname 2.ext`" an. Recovery lief sauber (git HEAD + die „2"-Kopien als Quelle), nichts Wichtiges verloren. Damit das nicht wiederkommt:
 
-### Offene Deploy-Aufgaben
-- [ ] Domain norex-digital.de in Vercel verbinden + DNS bei United Domains umstellen
-- [ ] Google Search Console einrichten + Domain verifizieren
-- [ ] Sitemap in GSC einreichen (`norex-digital.de/sitemap.xml`)
-- [ ] GA4: Maurice's Home-IP in Internal Traffic Filter eintragen
-- [ ] GA4: Conversion-Events als Schlüsselereignisse markieren (nach ersten echten Triggern)
-- [x] `hue` ausgeführt → `/norex-design` Skill generiert in `~/.claude/skills/norex-design/` ✅
+- **GitHub ist die einzige Wahrheit.** Nicht der Drive-Ordner. Bei Zweifel/Korruption: `git restore` aus HEAD.
+- **Vor jeder Arbeitssession:** `git pull`. **Nach jeder Session:** `git commit` + `git push`. Nie uncommitted über Nacht/Geräte-Wechsel liegen lassen.
+- **NIE gleichzeitig** auf PC und Mac am selben Workspace arbeiten. Vorher absprechen wer dran ist. Drive braucht Zeit zum Sync — nach Geräte-Wechsel kurz warten bis Drive „aktuell" zeigt.
+- **„`… 2.ext`"-Dateien = Alarmsignal** für einen Sync-Konflikt. Sofort prüfen (`find . -name "* 2.*"`), nicht ignorieren. Sicheres Aufräumen: Kopie nur löschen wenn die Base existiert + Inhalt hat.
+- **0-Byte-Check** bei Verdacht: `find . -type f -size 0 -not -path "./node_modules/*" -not -path "./.git/*"`.
+- **Drive-fragil (nicht in git):** `.claude/settings.local.json` (Permissions, 26 KB), `tasks/*`. Die haben kein GitHub-Backup → bei Korruption nur aus „2"-Kopie rettbar. Überlegung: wichtige interne Docs (`docs/pseo_*`) zu git hinzufügen + via `.vercelignore` vom Deploy ausschließen → Drive-Korruptions-Schutz ohne öffentlich zu werden.
+- **`.env` (`KIE_AI_API_KEY`) niemals committen, niemals löschen, Wert nie ausgeben.**
+
+---
+
+## Arbeitsweise — Agent-Methodik (bewährt, Stand 2026-06)
+
+Große Aufgaben (Audits, Multi-File-Fixes, PSEO-Seiten at scale) laufen über **Dynamic Workflows** (Workflow-Tool) mit parallelen Spezialisten-Agenten. Das hat sich bewährt:
+
+1. **Audit-Workflow** — mehrere Perspektiven PARALLEL (Copy/Brand-Voice, Tech-SEO/Links/Schema, Design/CRO/A11y, Compliance/Privacy) → ein Synthese-Agent konsolidiert in EINE priorisierte Fix-Liste (P0/P1/P2 + bewusst-später).
+2. **Fix-/Produktions-Workflow** — Agenten **nach Datei gruppiert** (jede Datei nur EIN Agent → keine Schreib-Konflikte), jeder wendet die Fixes/Inhalte seiner Datei(en) an.
+3. **Verify-Agent** — adversarial gegenprüfen (strukturiertes Pass/Fail-Verdikt) + danach **eigene Verifikation** (Grep-Stichproben + Screenshots der Kernseiten).
+4. **Ship** — nur öffentliche Dateien stagen, Direkt-Commit auf `main`, Live-Verifikation per curl.
+
+**Prinzipien:**
+- **Keine erfundenen Zahlen** — jede Statistik mit benannter Quelle + Jahr; internationale Daten als „international" kennzeichnen. Verifizierte Daten-Bank: `docs/pseo_datenbank.md`.
+- **Outcome statt Vanity** — Beweis-Blöcke zeigen Ergebnisse (Ranking, Tempo, Anfragen), nicht Agentur-interne Audit-Scores.
+- **Interne Docs bleiben lokal** — `docs/pseo_*`, `assets/templates/`, `tasks/` NICHT deployen (kein Playbook-Leak).
+- **Approval-Gates** bei Design-/Strategie-Entscheidungen; `/brainstorming` vor kreativen Änderungen.
+- **Autonom über Nacht** via Bypass-Permissions-Modus (Shift+Tab → „bypass permissions"), wenn keine Rückfragen gewünscht.
+
+**PSEO-Strategie (zwei Stränge, Quelle: `docs/pseo_strategiebericht.md`):**
+- **Strang 2 (LIVE):** eigene `/wissen`-Cluster-Seiten, Gewerk×Thema, Hub-and-Spoke — Eigenwerbung/Ranking.
+- **Strang 1 (offen):** wiederverwendbares Kunden-Location-Template (Service×Ort) für Kunden-Domains — **erst bei echtem Kunden** bauen.
 
 ---
 

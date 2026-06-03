@@ -1,35 +1,24 @@
 # Dependencies
 node_modules/
 
-# Internal tooling & screenshots
+# Internal tooling & screenshots (lokal halten)
 temporary screenshots/
 screenshot*.mjs
 serve.mjs
 audit-tech.mjs
 
-# Preview & draft files
+# Preview & draft files (Design-Iterationen, lokal halten)
 preview-*.html
-_hero-b.html
-_walkthrough.html
-_wireframes/
-test-versions/
-design-audit-20260418/
-prompts/
+
+# Internal docs & context (lokal halten)
 context/
-
-# Archive
-archive/
-
-# Email signature templates (internal only)
-brand_assets/email_signature/
-
-# Internal planning docs
-PAGE_BUILD_PLAN.md
 DESIGN.md
-handoff_website_workspace.md
 tasks/
 *.pdf
 *.png
+
+# Email signature templates (internal only)
+brand_assets/email_signature/
 
 # macOS
 .DS_Store
@@ -49,3 +38,6 @@ tasks/
 .gstack/
 .claude/
 .claudeignore
+
+# Brainstorming Visual Companion
+.superpowers/
