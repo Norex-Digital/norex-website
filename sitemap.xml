@@ -58,6 +58,128 @@
   </url>
 
   <url>
+    <loc>https://norex-digital.de/wissen</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/local-seo-gebaeudereinigung</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ═══ Wissen-Cluster — Reinigung (Hub R + Spokes) ═══ -->
+  <url>
+    <loc>https://norex-digital.de/wissen/gebaeudereinigung-kunden-gewinnen</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/google-business-profile-reinigungsfirma</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/website-reinigungsfirma</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/google-bewertungen-reinigung</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/neukunden-gebaeudereinigung-berlin</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/kosten-online-marketing-reinigungsfirma</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ═══ Wissen-Cluster — Gartenservice (Hub G + Spokes) ═══ -->
+  <url>
+    <loc>https://norex-digital.de/wissen/gartenservice-kunden-gewinnen</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/local-seo-gartenservice</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/google-business-profile-gartenservice</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/website-gartenservice</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/google-bewertungen-gartenbau</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/neukunden-gartenservice-berlin</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/kosten-online-marketing-gartenbau</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ═══ Wissen-Cluster — Übergreifend (Top-Hub + Problem-Aware-Spoke) ═══ -->
+  <url>
+    <loc>https://norex-digital.de/wissen/seo-handwerk-dienstleister</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://norex-digital.de/wissen/warum-handwerker-online-nicht-gefunden-werden</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://norex-digital.de/garantie</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>

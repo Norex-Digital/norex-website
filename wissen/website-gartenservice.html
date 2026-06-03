@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ TITLE / META ═══ -->
+  <title>Website für Gartenbau erstellen: mehr Anfragen · Norex</title>
+  <meta name="description" content="Website für Gartenbau erstellen lassen: So wird Ihr Gartenservice in Berlin & Brandenburg gefunden, lädt schnell und bringt Anfragen. Mit 90-Tage-Garantie.">
+
+  <!-- Canonical — absolut, HTTPS, OHNE Trailing-Slash, self-referencing -->
+  <link rel="canonical" href="https://norex-digital.de/wissen/website-gartenservice">
+
+  <!-- Open Graph — og:url zeichengleich mit Canonical -->
+  <meta property="og:title" content="Website für Gartenbau erstellen — gefunden, schnell, beauftragt · Norex">
+  <meta property="og:description" content="So wird Ihre Gartenservice-Website in Berlin & Brandenburg gefunden und beauftragt: Tempo, lokale Sichtbarkeit, klare Anfrage-Wege. Belegte Zahlen, 90-Tage-Garantie.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://norex-digital.de/wissen/website-gartenservice">
+  <meta property="og:image" content="https://norex-digital.de/assets/images/og/og-neukundengewinnung.webp">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Norex">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website für Gartenbau erstellen — gefunden & beauftragt · Norex">
+  <meta name="twitter:description" content="So wird Ihre Gartenservice-Website in Berlin & Brandenburg gefunden und beauftragt. Belegte Zahlen, 90-Tage-Garantie.">
+  <meta name="twitter:image" content="https://norex-digital.de/assets/images/og/og-neukundengewinnung.webp">
+
+  <!-- Fonts (self-hosted, DSGVO-konform; font-display:swap in fonts.css) -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/logo/favicon.svg">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'norex-primary':   '#0A0A0A',
+            'norex-secondary': '#FFFFFF',
+            'norex-accent':    '#E2231A',
+            'norex-bg':        '#FFFFFF',
+            'norex-bg-soft':   '#F8F7F4',
+            'norex-ink': {
+              100: '#F8F7F4',
+              200: '#E8E5DD',
+              300: '#B8B5AB',
+              400: '#6B6960',
+              500: '#3A3833',
+              600: '#1A1916',
+            },
+            success: '#1F7A4F',
+          },
+          fontFamily: {
+            display: ['"Geist"', 'system-ui', 'sans-serif'],
+            sans:    ['"Manrope"', 'system-ui', 'sans-serif'],
+            mono:    ['"Geist Mono"', 'ui-monospace', 'monospace'],
+          },
+          fontSize: {
+            'display-xl': ['3rem',    { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+            'display-l':  ['2.25rem', { lineHeight: '1.1',  letterSpacing: '-0.02em'  }],
+            'display-m':  ['1.75rem', { lineHeight: '1.15', letterSpacing: '-0.01em'  }],
+            'display-s':  ['1.375rem',{ lineHeight: '1.2',  letterSpacing: '0'        }],
+            'body-l': ['1.125rem', { lineHeight: '1.7' }],
+            'body':   ['1rem',     { lineHeight: '1.7' }],
+            'body-s': ['0.875rem', { lineHeight: '1.6' }],
+          },
+          transitionTimingFunction: {
+            'spring':    'cubic-bezier(0.34, 1.56, 0.64, 1)',
+            'out-quart': 'cubic-bezier(0.22, 1, 0.36, 1)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SCHEMA.ORG JSON-LD — Cluster-Spoke-Graph
+       Service (#service) + WebPage (#webpage) + BreadcrumbList (#breadcrumb)
+       #organization nur referenziert. Kein FAQPage. Kein zweites Service-Preis-Schema.
+       ════════════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://norex-digital.de/wissen/website-gartenservice#service",
+        "name": "Website-Erstellung für Gartenservice & GaLaBau",
+        "serviceType": "Website-Erstellung & Local SEO für Garten- und Landschaftsbau",
+        "description": "Norex erstellt schnelle, gefundene Websites für Gartenservice- und GaLaBau-Betriebe in Berlin und Brandenburg: Static HTML mit grünen Core Web Vitals, lokale Sichtbarkeit und klare Anfrage-Wege.",
+        "provider": { "@id": "https://norex-digital.de/#organization" },
+        "areaServed": ["Berlin", "Brandenburg"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://norex-digital.de/wissen/website-gartenservice#webpage",
+        "url": "https://norex-digital.de/wissen/website-gartenservice",
+        "name": "Website für Gartenbau erstellen: mehr Anfragen · Norex",
+        "description": "Website für Gartenbau erstellen lassen: So wird Ihr Gartenservice in Berlin & Brandenburg gefunden, lädt schnell und bringt Anfragen. Mit belegten Zahlen und 90-Tage-Garantie.",
+        "inLanguage": "de-DE",
+        "isPartOf": { "@id": "https://norex-digital.de/#website" },
+        "breadcrumb": { "@id": "https://norex-digital.de/wissen/website-gartenservice#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://norex-digital.de/wissen/website-gartenservice#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://norex-digital.de/" },
+          { "@type": "ListItem", "position": 2, "name": "Wissen", "item": "https://norex-digital.de/wissen" },
+          { "@type": "ListItem", "position": 3, "name": "Gartenservice Kunden gewinnen", "item": "https://norex-digital.de/wissen/gartenservice-kunden-gewinnen" },
+          { "@type": "ListItem", "position": 4, "name": "Website für Gartenservice", "item": "https://norex-digital.de/wissen/website-gartenservice" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Nav-Offset */
+    [data-component="nav"] + * { padding-top: 0; }
+
+    /* Nav-Placeholder-Höhe reservieren — CLS-Schutz */
+    [data-component="nav"] { display: block; min-height: 72px; }
+
+    /* Details/Summary FAQ — native, kein JS (INP-Schutz) */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1); }
+    details[open] .faq-answer { animation: faqOpen 200ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes faqOpen { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Norex Score-Quadratik ── 1:1 portiert aus jr-gebaeudeservice ── */
+    .norex-score-quadratik { --bar-color: #E2231A; --bar-bg: #E8E5DD; }
+    .norex-score-card { position: relative; }
+    @media (prefers-reduced-motion: reduce) {
+      .norex-score-card .bg-norex-accent { transition: none !important; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+    }
+  </style>
+
+  <!-- Google Consent Mode v2 — muss vor GA4 stehen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJ2TTH429"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YCJ2TTH429');
+  </script>
+  <!-- Klaro Cookie Consent (DSGVO) -->
+  <link rel="stylesheet" href="/assets/klaro/klaro.min.css">
+  <script src="/assets/klaro/klaro-config.js"></script>
+  <script defer src="/assets/klaro/klaro.js"></script>
+</head>
+<body class="bg-white font-sans antialiased">
+
+  <!-- Nav Component -->
+  <div data-component="nav" style="visibility:hidden"></div>
+
+  <main>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="pt-36 pb-20 px-4 md:px-8 bg-white" aria-labelledby="hero-heading">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Back-Link zum Hub -->
+      <div class="text-left mb-6">
+        <a href="/wissen/gartenservice-kunden-gewinnen"
+          class="inline-flex items-center gap-2 font-sans text-body-s text-norex-ink-400 py-2 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm"
+          style="transition:color 150ms,gap 150ms cubic-bezier(0.34,1.56,0.64,1)"
+          onmouseover="this.style.color='#0A0A0A';this.style.gap='10px'"
+          onmouseout="this.style.color='';this.style.gap=''">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gartenservice Kunden gewinnen
+        </a>
+      </div>
+
+      <!-- Badge -->
+      <div class="mb-8">
+        <span class="inline-flex items-center gap-2 border border-norex-ink-300 text-norex-ink-400 font-sans text-body-s px-3.5 py-1.5 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-norex-accent flex-shrink-0" aria-hidden="true"></span>
+          Website · Gartenservice
+        </span>
+      </div>
+
+      <!-- H1 — Primär-Keyword exact match, != Title -->
+      <h1 id="hero-heading" class="font-display font-extrabold text-norex-primary mb-6"
+          style="font-size:clamp(2.25rem,5.5vw,4rem);line-height:1.05;letter-spacing:-0.025em;text-wrap:balance">
+        Website für Gartenbau erstellen —<br>
+        <span class="text-norex-accent">aus Besuchern werden Anfragen.</span>
+      </h1>
+
+      <!-- Sub-Text — lokaler/gewerk-Kontext -->
+      <p class="font-sans text-body-l text-norex-ink-400 mb-10 max-w-xl mx-auto" style="line-height:1.7">
+        Sie legen Gärten an, pflegen Hecken, halten Außenanlagen in Schuss — und doch hängt der Kalender an Mundpropaganda und ein paar Stammkunden. Wenn ein Grundstücksbesitzer in Potsdam abends „Gartenpflege in der Nähe“ tippt, entscheidet eine Website in Sekunden, ob er anfragt. Wir erstellen für Ihren Gartenservice in Berlin und Brandenburg eine Seite, die schnell lädt, lokal gefunden wird und den Weg zur Anfrage glasklar macht.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <a href="/sichtbarkeitscheck"
+           class="inline-flex items-center gap-2 bg-norex-accent text-white font-sans font-bold text-body px-6 py-4 rounded
+                  focus-visible:outline-2 focus-visible:outline-norex-primary focus-visible:outline-offset-2"
+           style="transition:transform 150ms cubic-bezier(0.34,1.56,0.64,1)"
+           onmouseover="this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.transform=''"
+           onmousedown="this.style.transform='translateY(0)'">
+          Sichtbarkeitscheck starten →
+        </a>
+        <a href="https://calendly.com/office-norexai/30min" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 font-sans font-semibold text-body text-norex-ink-500
+                  underline underline-offset-[3px] decoration-norex-ink-300
+                  focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm"
+           style="transition:color 150ms,text-decoration-color 150ms"
+           onmouseover="this.style.color='#0A0A0A';this.style.textDecorationColor='#0A0A0A'"
+           onmouseout="this.style.color='';this.style.textDecorationColor=''">
+          30 Min mit Maurice &amp; Noah
+        </a>
+      </div>
+
+      <!-- Trust-Triade -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Berlin &amp; Brandenburg
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Static HTML, grüne Core Web Vitals
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Belegt am JR-Fall: 7 Tage live
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 2 — GEWERK-KONTEXT  (dunkel)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-primary" aria-labelledby="kontext-heading">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Insider-Callout (Noah Ex-Betreiber) -->
+      <aside class="mb-10 rounded-xl overflow-hidden"
+             style="background:#1A1916;border:1px solid #3A3833;border-top:2px solid #E2231A;box-shadow:0 2px 0 rgba(0,0,0,0.25),0 8px 24px rgba(0,0,0,0.2);padding:20px 24px"
+             aria-label="Insider-Hinweis">
+        <p class="font-display font-bold text-white mb-1.5"
+           style="font-size:1.0625rem;line-height:1.2;letter-spacing:-0.01em">
+          Noah hat selbst einen Dienstleistungsbetrieb geführt.
+        </p>
+        <p class="font-sans" style="font-size:0.9375rem;line-height:1.65;color:#B8B5AB">
+          Er kennt das Muster aus dem Gartenbau-Alltag: im Frühjahr und Sommer Anfragen ohne Ende, im Winter Funkstille — und eine Website, die nur ein digitaler Briefkasten ist statt ein Vertriebskanal. Eine Seite, die gefunden wird und Anfragen aufnimmt, glättet diese Täler. Genau dort setzt unser Aufbau an.
+        </p>
+      </aside>
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-6">Warum eine richtige Website</p>
+
+      <h2 id="kontext-heading" class="font-display font-extrabold text-white mb-10"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Warum bringt Ihre Gartenservice-Website keine Anfragen?
+      </h2>
+
+      <!-- Nummerierte Liste -->
+      <div class="space-y-0 divide-y divide-norex-ink-600">
+
+        <!-- 01 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">01</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Kunden prüfen Sie online, bevor sie anrufen
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              Über 90 % der Kunden recherchieren online, bevor sie einen Handwerksbetrieb kontaktieren (Bitkom, Studie „Digitalisierung des Handwerks“, 2025). Das ist die wichtigste deutsche Zahl in dieser Reihe: Wer Ihre Hecken-, Pflaster- und Pflegeleistungen sucht, schaut sich erst Ihre Website an. Wirkt die veraltet, lückenhaft oder lädt sie quälend langsam, ist die Anfrage weg, bevor das Telefon klingelt.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">02</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Sichtbar sind viele — auffindbar nur wenige
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              Nur 40 % der Handwerksbetriebe sind überhaupt auf Bewertungsplattformen auffindbar (Bitkom, Studienbericht Handwerk, 2025) — die Lücke zu den über 90 %, die online suchen, ist riesig. Für den Gartenbau heißt das: Eine Website allein reicht nicht, sie muss mit Google-Profil, Bewertungen und lokalen Suchbegriffen verzahnt sein. Sonst existiert Ihr Betrieb online — aber niemand findet ihn im richtigen Moment.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">03</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Die Nachfrage ist da — Sie müssen sie nur abgreifen
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              51,8 % der GaLaBau-Betriebe bewerten ihre Geschäftslage als „gut“, weitere 40,1 % als „befriedigend“ (BGL Frühjahrsumfrage, 2026). Der Markt ist gesund, die Auftragslage planbar — der Engpass ist selten die Nachfrage, sondern wer sie zuerst online abgreift. Eine Website, die für „Gartenpflege Potsdam“ oder „Heckenschnitt Spandau“ oben steht, holt die Anfragen ab, die heute beim schnelleren Mitbewerber landen.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">04</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Tempo entscheidet — am Smartphone besonders
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              Gartenservice wird unterwegs gesucht: auf der Terrasse, im Garten, am Handy. Eine Seite, die drei Sekunden zum Laden braucht oder mit Cookie-Bannern und Slidern zugestellt ist, verliert genau diese mobilen Anfragen. Wir bauen auf Static HTML mit grünen Core Web Vitals — schnell, ohne Ballast, mit einem Anfrage-Formular und einer Klick-zum-Anrufen-Nummer, die auf jedem Bildschirm sofort sichtbar sind.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Silo-Naht: Link auf die Money-Page -->
+      <p class="font-sans text-body text-norex-ink-300 mt-10">
+        <a href="/leistungen/akquise" data-track="crosslink_website-gartenservice_to_akquise"
+           class="text-white font-medium underline underline-offset-2 decoration-norex-ink-400 hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:text-decoration-color 150ms">
+          So baut Norex Websites, die für Gartenbetriebe Aufträge bringen →
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 3 — BEWEIS-BLOCK  (soft) — echte JR-Pilot-Daten
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 px-4 md:px-8 bg-norex-bg-soft" aria-labelledby="score-heading">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-14">
+        <p class="font-mono font-bold text-norex-accent uppercase tracking-widest mb-3"
+           style="font-size:0.65rem;letter-spacing:0.12em">Belegt am JR-Fall · Gebäudereinigung, Falkensee</p>
+        <h2 id="score-heading" class="font-display font-extrabold text-norex-primary"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+          Was bringt eine neue Website konkret?
+        </h2>
+      </div>
+
+      <div class="norex-score-quadratik grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Karte 1 — Ranking (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Ranking</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">Platz&nbsp;2</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">bei Google für „fensterputzer&nbsp;falkensee“ — vorher nicht in den Top&nbsp;50.</p>
+        </div>
+
+        <!-- Karte 2 — Tempo (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Tempo</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">7&nbsp;Tage</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">von der Live-Schaltung der neuen Website bis auf Google-Position&nbsp;2.</p>
+        </div>
+
+        <!-- Karte 3 — Reichweite (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Reichweite</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">40+</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">Standorte im Einzugsgebiet, für die JR&nbsp;Gebäudeservice über die neue Seite gefunden wird.</p>
+        </div>
+
+      </div><!-- /.norex-score-quadratik -->
+
+      <!-- Was das für Ihren Betrieb heißt — outcome-orientierte Branchen-Zahl (distinct von Section 4 Body-Stats) -->
+      <div class="mt-12 max-w-3xl mx-auto rounded-xl border-l-4 border-norex-accent bg-white p-6 md:p-7"
+           style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 4px 16px rgba(10,10,10,0.06)">
+        <p class="font-mono font-bold text-norex-accent uppercase tracking-widest mb-2"
+           style="font-size:0.6rem;letter-spacing:0.1em">Was das für Ihren Betrieb heißt</p>
+        <p class="font-sans text-norex-ink-500 leading-relaxed" style="font-size:1rem">
+          <strong class="text-norex-primary font-semibold">76 % der Menschen, die lokal nach einem Anbieter suchen, besuchen oder kontaktieren ihn innerhalb von 24 Stunden</strong> (Backlinko, Datenquelle Google, 2024, international). Lädt Ihre Website in diesem Fenster nicht schnell und führt nicht direkt zur Anfrage, geht der heiße Kontakt zum nächsten Treffer.
+        </p>
+      </div>
+
+      <!-- Quellen-Caption — echtes Ergebnis, benannte Quelle -->
+      <p class="font-sans text-body-s text-norex-ink-300 text-center mt-8">
+        Echte Zahlen aus dem Norex-Projekt für JR Gebäudeservice (Falkensee) — Audit &amp; Launch Mai&nbsp;2026, alle Werte im verlinkten Fallbericht belegt.
+      </p>
+
+      <!-- Proof-Link auf JR-Case-Study -->
+      <p class="font-sans text-body-s text-norex-ink-400 text-center mt-4">
+        <a href="/referenzen/jr-gebaeudeservice" data-track="crosslink_website-gartenservice_to_jr"
+           class="text-norex-primary font-medium underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:color 150ms">
+          Den vollständigen JR-Fall mit Zeitstrahl ansehen →
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 4 — TRUST-SIGNALE  (weiß) — Branchenkennzahl + Methode
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-white" aria-labelledby="trust-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-4">Worauf wir aufbauen</p>
+      <h2 id="trust-heading" class="font-display font-bold text-norex-primary mb-10"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Was macht eine Norex-Website für Gartenbetriebe anders?
+      </h2>
+
+      <!-- Branchenkennzahl-Karte -->
+      <div class="border border-norex-ink-200 p-8 md:p-10 mb-8"
+           style="box-shadow:0 2px 8px rgba(10,10,10,0.04),0 12px 32px rgba(10,10,10,0.06)">
+        <p class="font-mono font-bold text-norex-accent tabular-nums mb-2" style="font-size:clamp(2rem,5vw,3rem);line-height:1;letter-spacing:-0.025em">
+          über 90 %
+        </p>
+        <p class="font-sans text-body text-norex-ink-500 leading-relaxed mb-3">
+          der Kunden recherchieren online, bevor sie einen Handwerksbetrieb kontaktieren. Für den Gartenservice heißt das: Ihre Website ist die erste Begegnung — sie entscheidet über die Anfrage, bevor jemand wählt. Sie ist deshalb kein Aushängeschild, sondern Ihr wichtigster Vertriebskanal.
+        </p>
+        <p class="font-sans text-body-s text-norex-ink-400">
+          Quelle:
+          <a href="https://www.it-management.today/handwerk-90-der-kunden-suchen-laut-studie-online" target="_blank" rel="noopener noreferrer"
+             class="underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+             style="transition:color 150ms">Bitkom „Digitalisierung des Handwerks“, 2025</a>
+        </p>
+      </div>
+
+      <!-- Body-Fließtext — Daten-Triangulation -->
+      <div class="font-sans text-body text-norex-ink-500 leading-relaxed space-y-5 max-w-2xl">
+        <p>
+          Wir bauen Ihre Website nicht aus dem Designkatalog, sondern aus drei zusammenpassenden Ebenen. Erstens die Branchenrealität: Wenn über 90 % der Kunden vorab online prüfen (Bitkom, 2025), aber nur 40 % der Betriebe online überhaupt auffindbar sind (Bitkom, 2025), liegt zwischen Nachfrage und Anbieter eine Lücke — wer sie schließt, gewinnt. Zweitens ein gesunder Markt: 51,8 % der GaLaBau-Betriebe bewerten ihre Lage als „gut“ (BGL, 2026), die Aufträge sind da. Drittens ein belegter Fall statt eines Versprechens.
+        </p>
+        <p>
+          Dieser Fall ist JR Gebäudeservice in Falkensee. Vor unserer Arbeit: zwei widersprüchliche Telefonnummern, zwei parallele Google-Profile, kein Schema-Markup, eine Seite, die kaum Anfragen brachte. Nach Audit, Static-HTML-Neubau, GBP-Bereinigung und über 40 eigenen Standort-Seiten stand der Betrieb in 7 Tagen auf Google-Position 2 für „fensterputzer falkensee“ — und bekam zwei Anfragen über das neue Formular in zwei Wochen. Dieselbe Methode bauen wir für Ihren Gartenservice in Berlin und Brandenburg: schnell, gefunden, mit klaren Anfrage-Wegen. Mehr Aufträge. Mehr Sichtbarkeit. Wir machen das.
+        </p>
+      </div>
+
+      <!-- Sibling-Links — verwandte Spokes im selben Gewerk -->
+      <div class="mt-10 pt-8 border-t border-norex-ink-200">
+        <p class="font-sans text-body-s text-norex-ink-400 uppercase tracking-widest font-semibold mb-4">Mehr aus dem Garten-Cluster</p>
+        <ul class="space-y-2.5">
+          <li>
+            <a href="/wissen/local-seo-gartenservice"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Local SEO für den Gartenservice — oben bei Google im Bezirk →</a>
+          </li>
+          <li>
+            <a href="/wissen/google-business-profile-gartenservice"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Google Business Profile für den Gartenservice einrichten →</a>
+          </li>
+          <li>
+            <a href="/wissen/neukunden-gartenservice-berlin"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Neukunden für den Gartenservice in Berlin gewinnen →</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 5 — PROZESS "WIE ES LÄUFT"  (dunkel)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-primary" aria-labelledby="prozess-heading">
+    <div class="max-w-4xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-4">Wie es läuft</p>
+      <h2 id="prozess-heading" class="font-display font-extrabold text-white mb-6"
+          style="font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Drei Schritte bis zur ersten Anfrage.
+      </h2>
+
+      <!-- Einleitungssatz -->
+      <p class="font-sans text-body-l text-white/70 mb-14 max-w-xl" style="line-height:1.7">
+        Sie müssen kein CMS lernen und keine Texte selbst schreiben. Wir erstellen Ihre Gartenservice-Website samt lokaler Sichtbarkeit — Sie sind weiter im Garten, das Telefon klingelt.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:divide-x divide-norex-ink-600">
+
+        <!-- Schritt 1 -->
+        <div class="pb-10 md:pb-0 md:pr-10">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">01</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            Sichtbarkeitscheck
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Kostenlos. Wir prüfen Ihre aktuelle Website, Ihr Google-Profil und Ihre Bezirks-Rankings im Einzugsgebiet. In 48 Stunden haben Sie eine klare Analyse — was Anfragen kostet und was als Erstes zählt.
+          </p>
+        </div>
+
+        <!-- Schritt 2 -->
+        <div class="py-10 md:py-0 md:px-10 border-t md:border-t-0 border-norex-ink-600">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">02</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            Aufbau
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Wir erstellen die Website auf Static HTML mit grünen Core Web Vitals: Ihre Leistungen, Anfrage-Formular, Klick-zum-Anrufen, lokale Suchbegriffe und Schema.org. Kein Aufwand für Sie — in 1–2 Wochen ist die Seite live.
+          </p>
+        </div>
+
+        <!-- Schritt 3 -->
+        <div class="pt-10 md:pt-0 md:pl-10 border-t md:border-t-0 border-norex-ink-600">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">03</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            90-Tage-Monitoring
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Jeden Monat sehen Sie, wie sich Seitenbesuche, Formular-Anfragen und Rankings entwickeln — dazu 30 Minuten mit Maurice oder Noah. Innerhalb von 90 Tagen wird der Effekt messbar, abgesichert durch unsere Garantie.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 6 — GARANTIE-BLOCK  (soft)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-bg-soft" aria-labelledby="garantie-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-6">90-Tage-Garantie</p>
+
+      <h2 id="garantie-heading" class="font-display font-extrabold text-norex-primary mb-6"
+          style="font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Messbar mehr — oder der erste Monatsbeitrag entfällt.
+      </h2>
+
+      <p class="font-sans text-body-l text-norex-ink-500 mb-10 max-w-xl" style="line-height:1.7">
+        Wir garantieren konkrete, messbare Ergebnisse in 90 Tagen. Wird keines der drei Ziele erreicht, entfällt der erste Monatsbeitrag — 500 €, ohne Diskussion.
+      </p>
+
+      <!-- ODER-KPIs -->
+      <div class="space-y-0 divide-y divide-norex-ink-200 mb-10">
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">A</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Profil-Anzeigen auf Google <strong class="text-norex-accent">+50%</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">Gemessen in Ihrem Google-Profil-Konto</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">B</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Anrufe über Google <strong class="text-norex-accent">+5 pro Monat</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">Anrufe direkt über Google Maps</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">C</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Anfragen über Ihre Homepage <strong class="text-norex-accent">+3 pro Monat</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">In Ihrer Homepage-Statistik — jeden Monat einsehbar</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="/garantie"
+         class="inline-flex items-center gap-2 border border-norex-ink-300 text-norex-ink-500 font-sans text-body-s px-5 py-2.5 rounded
+                hover:border-norex-primary hover:text-norex-primary focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"
+         style="transition:border-color 150ms,color 150ms">
+        Alle Garantie-Details →
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 7 — FAQ  (weiß) — native details/summary, kein FAQPage-JSON-LD
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-white" aria-labelledby="faq-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-4">Häufige Fragen</p>
+      <h2 id="faq-heading" class="font-display font-bold text-norex-primary mb-12"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Website für den Gartenbau — häufige Fragen.
+      </h2>
+
+      <div class="space-y-0 divide-y divide-norex-ink-200">
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Was kostet es, eine Website für den Gartenbau erstellen zu lassen?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Norex arbeitet nicht mit einer hohen Einmalsumme, sondern mit einem planbaren Monatsbeitrag, der Website, Google-Profil und lokale Sichtbarkeit zusammenfasst. Der erste Monatsbeitrag liegt bei 500 € und entfällt, wenn keines der drei Garantie-Ziele in 90 Tagen erreicht wird. Was genau Ihr Gartenservice braucht — Neubau oder Optimierung der bestehenden Seite — klären wir im kostenlosen Sichtbarkeitscheck, bevor Sie sich festlegen.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Wie lange dauert es, bis meine Gartenservice-Website online ist?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">In der Regel ist die Website in 1–2 Wochen nach dem Sichtbarkeitscheck live. Beim JR-Fall in Falkensee stand die neue Seite nach Launch in 7 Tagen auf Google-Position 2 für „fensterputzer falkensee“ — das ist ein starker Einzelfall, kein garantierter Standard. Für den Gartenbau gilt: Texte, Fotos und Leistungen liefern Sie nicht selbst aufwendig zu, wir holen das Nötige in einem kurzen Termin ab und bauen den Rest.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Reicht für meinen Gartenservice nicht ein Google-Profil ohne Website?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Ein Google-Profil bringt Sie in die Karte, aber die Website überzeugt. Über 90 % der Kunden recherchieren online, bevor sie einen Handwerksbetrieb kontaktieren (Bitkom, 2025) — und nach dem Profil-Klick landen viele auf Ihrer Seite, um Leistungen, Referenzgärten und Vertrauen zu prüfen. Fehlt die Website oder ist sie schwach, verpufft das Profil. Beide zusammen — verzahnt über einheitliche Daten und lokale Suchbegriffe — bringen die Anfrage.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Funktioniert das auch für Gartenbetriebe in Brandenburg?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Ja. Norex betreut Gartenservice- und GaLaBau-Betriebe in ganz Berlin und im gesamten Bundesland Brandenburg — von Potsdam über das Havelland bis ins Berliner Umland. Der bisher stärkste belegte Fall liegt in Falkensee. Aufbau, Texte, Google-Profil und Reports laufen vollständig remote, ein Vor-Ort-Termin ist nicht nötig. Die Seite wird auf die Bezirke und Orte ausgerichtet, in denen Sie tatsächlich arbeiten.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Warum baut Norex auf Static HTML statt auf einem Baukasten?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Weil Tempo Anfragen entscheidet. Baukasten-Seiten laden oft langsam, schleppen unnötigen Code mit und verlieren mobile Besucher — genau die, die unterwegs nach Gartenpflege suchen. Static HTML lädt nahezu sofort, erreicht grüne Core Web Vitals und wird von Google bevorzugt indexiert. Für Ihren Gartenservice heißt das: schnellere Seite, bessere Rankings, mehr Anfragen aus demselben Besucherstrom.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Bridge FAQ → Direktkontakt -->
+      <div class="mt-8 pt-6 border-t border-norex-ink-200 flex flex-col sm:flex-row sm:items-center gap-3">
+        <p class="font-sans text-body text-norex-ink-500">Haben Sie eine Frage die hier nicht steht?</p>
+        <a href="https://wa.me/4915156198195" target="_blank" rel="noopener noreferrer"
+           class="font-sans text-body font-medium text-norex-primary underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:color 150ms" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'whatsapp_click'})">
+          Direkt auf WhatsApp schreiben — Antwort am selben Werktag
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- CTA-Footer Component -->
+  <div data-component="cta-footer"></div>
+
+  <!-- Footer Component -->
+  <div data-component="footer"></div>
+
+  <!-- Component Loader -->
+  <script src="/assets/loader.js"></script>
+
+</body>
+</html>

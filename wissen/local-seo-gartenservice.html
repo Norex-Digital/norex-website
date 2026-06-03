@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ TITLE / META ═══ -->
+  <title>Local SEO Gartenbau: oben bei Google im Bezirk · Norex</title>
+  <meta name="description" content="Local SEO für Gartenbau in Berlin & Brandenburg: So findet Google Ihren Gartenservice, wenn Anwohner im Ort nach Pflege suchen. Belegt, messbar in 90 Tagen.">
+
+  <!-- Canonical — absolut, HTTPS, OHNE Trailing-Slash, self-referencing -->
+  <link rel="canonical" href="https://norex-digital.de/wissen/local-seo-gartenservice">
+
+  <!-- Open Graph — og:url zeichengleich mit Canonical -->
+  <meta property="og:title" content="Local SEO Gartenbau — oben bei Google im Ort · Norex">
+  <meta property="og:description" content="So bringt Local SEO Ihren Gartenservice dorthin, wo Anwohner in Berlin & Brandenburg suchen. Echte Daten, Insider-Methode, messbar in 90 Tagen.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://norex-digital.de/wissen/local-seo-gartenservice">
+  <meta property="og:image" content="https://norex-digital.de/assets/images/og/og-neukundengewinnung.webp">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Norex">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Local SEO Gartenbau — oben bei Google · Norex">
+  <meta name="twitter:description" content="So findet Google Ihren Gartenservice, wenn Anwohner im Ort suchen. Echte Daten, messbar in 90 Tagen.">
+  <meta name="twitter:image" content="https://norex-digital.de/assets/images/og/og-neukundengewinnung.webp">
+
+  <!-- Fonts (self-hosted, DSGVO-konform; font-display:swap in fonts.css) -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/brand_assets/logo/favicon.svg">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'norex-primary':   '#0A0A0A',
+            'norex-secondary': '#FFFFFF',
+            'norex-accent':    '#E2231A',
+            'norex-bg':        '#FFFFFF',
+            'norex-bg-soft':   '#F8F7F4',
+            'norex-ink': {
+              100: '#F8F7F4',
+              200: '#E8E5DD',
+              300: '#B8B5AB',
+              400: '#6B6960',
+              500: '#3A3833',
+              600: '#1A1916',
+            },
+            success: '#1F7A4F',
+          },
+          fontFamily: {
+            display: ['"Geist"', 'system-ui', 'sans-serif'],
+            sans:    ['"Manrope"', 'system-ui', 'sans-serif'],
+            mono:    ['"Geist Mono"', 'ui-monospace', 'monospace'],
+          },
+          fontSize: {
+            'display-xl': ['3rem',    { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+            'display-l':  ['2.25rem', { lineHeight: '1.1',  letterSpacing: '-0.02em'  }],
+            'display-m':  ['1.75rem', { lineHeight: '1.15', letterSpacing: '-0.01em'  }],
+            'display-s':  ['1.375rem',{ lineHeight: '1.2',  letterSpacing: '0'        }],
+            'body-l': ['1.125rem', { lineHeight: '1.7' }],
+            'body':   ['1rem',     { lineHeight: '1.7' }],
+            'body-s': ['0.875rem', { lineHeight: '1.6' }],
+          },
+          transitionTimingFunction: {
+            'spring':    'cubic-bezier(0.34, 1.56, 0.64, 1)',
+            'out-quart': 'cubic-bezier(0.22, 1, 0.36, 1)',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SCHEMA.ORG JSON-LD — Cluster-Spoke-Graph
+       Service (#service) + WebPage (#webpage) + BreadcrumbList (#breadcrumb)
+       #organization nur referenziert. Kein FAQPage. Kein zweites Service-Preis-Schema.
+       ════════════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://norex-digital.de/wissen/local-seo-gartenservice#service",
+        "name": "Local SEO für Gartenbau & Gartenservice",
+        "serviceType": "Local SEO & Google-Sichtbarkeit für Garten- und Landschaftsbaubetriebe",
+        "description": "Norex bringt Gartenservice- und GaLaBau-Betriebe in Berlin und Brandenburg dorthin, wo Anwohner im Ort suchen: Google Business Profile, Local SEO, NAP-Konsistenz und eine schnelle, gefundene Website.",
+        "provider": { "@id": "https://norex-digital.de/#organization" },
+        "areaServed": ["Berlin", "Brandenburg"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://norex-digital.de/wissen/local-seo-gartenservice#webpage",
+        "url": "https://norex-digital.de/wissen/local-seo-gartenservice",
+        "name": "Local SEO Gartenbau: oben bei Google im Bezirk · Norex",
+        "description": "Local SEO für Gartenbau in Berlin & Brandenburg: So findet Google Ihren Gartenservice, wenn Anwohner im Ort nach Pflege suchen. Belegt, messbar in 90 Tagen.",
+        "inLanguage": "de-DE",
+        "isPartOf": { "@id": "https://norex-digital.de/#website" },
+        "breadcrumb": { "@id": "https://norex-digital.de/wissen/local-seo-gartenservice#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://norex-digital.de/wissen/local-seo-gartenservice#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://norex-digital.de/" },
+          { "@type": "ListItem", "position": 2, "name": "Wissen", "item": "https://norex-digital.de/wissen" },
+          { "@type": "ListItem", "position": 3, "name": "Gartenservice Kunden gewinnen", "item": "https://norex-digital.de/wissen/gartenservice-kunden-gewinnen" },
+          { "@type": "ListItem", "position": 4, "name": "Local SEO Gartenbau", "item": "https://norex-digital.de/wissen/local-seo-gartenservice" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Nav-Offset */
+    [data-component="nav"] + * { padding-top: 0; }
+
+    /* Nav-Placeholder-Höhe reservieren — CLS-Schutz */
+    [data-component="nav"] { display: block; min-height: 72px; }
+
+    /* Details/Summary FAQ — native, kein JS (INP-Schutz) */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1); }
+    details[open] .faq-answer { animation: faqOpen 200ms cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes faqOpen { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Norex Score-Quadratik ── 1:1 portiert aus jr-gebaeudeservice ── */
+    .norex-score-quadratik { --bar-color: #E2231A; --bar-bg: #E8E5DD; }
+    .norex-score-card { position: relative; }
+    @media (prefers-reduced-motion: reduce) {
+      .norex-score-card .bg-norex-accent { transition: none !important; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+    }
+  </style>
+
+  <!-- Google Consent Mode v2 — muss vor GA4 stehen -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCJ2TTH429"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YCJ2TTH429');
+  </script>
+  <!-- Klaro Cookie Consent (DSGVO) -->
+  <link rel="stylesheet" href="/assets/klaro/klaro.min.css">
+  <script src="/assets/klaro/klaro-config.js"></script>
+  <script defer src="/assets/klaro/klaro.js"></script>
+</head>
+<body class="bg-white font-sans antialiased">
+
+  <!-- Nav Component -->
+  <div data-component="nav" style="visibility:hidden"></div>
+
+  <main>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="pt-36 pb-20 px-4 md:px-8 bg-white" aria-labelledby="hero-heading">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Back-Link zum Hub -->
+      <div class="text-left mb-6">
+        <a href="/wissen/gartenservice-kunden-gewinnen"
+          class="inline-flex items-center gap-2 font-sans text-body-s text-norex-ink-400 py-2 focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm"
+          style="transition:color 150ms,gap 150ms cubic-bezier(0.34,1.56,0.64,1)"
+          onmouseover="this.style.color='#0A0A0A';this.style.gap='10px'"
+          onmouseout="this.style.color='';this.style.gap=''">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M13 7H1M7 1L1 7l6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gartenservice Kunden gewinnen
+        </a>
+      </div>
+
+      <!-- Badge -->
+      <div class="mb-8">
+        <span class="inline-flex items-center gap-2 border border-norex-ink-300 text-norex-ink-400 font-sans text-body-s px-3.5 py-1.5 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-norex-accent flex-shrink-0" aria-hidden="true"></span>
+          Local SEO · Gartenservice
+        </span>
+      </div>
+
+      <!-- H1 — Primär-Keyword "local seo gartenbau" exact match, != Title -->
+      <h1 id="hero-heading" class="font-display font-extrabold text-norex-primary mb-6"
+          style="font-size:clamp(2.25rem,5.5vw,4rem);line-height:1.05;letter-spacing:-0.025em;text-wrap:balance">
+        Local SEO für Gartenbau —<br>
+        <span class="text-norex-accent">gefunden, wo Ihre Kunden wohnen.</span>
+      </h1>
+
+      <!-- Sub-Text — lokaler/gewerk-Kontext -->
+      <p class="font-sans text-body-l text-norex-ink-400 mb-10 max-w-xl mx-auto" style="line-height:1.7">
+        Sie legen Beete an, pflegen Rasen, schneiden Hecken auf den Tag genau. Aber wenn ein Anwohner „Gartenpflege Köpenick“ tippt, steht ein anderer Betrieb oben — und der bekommt die Anfrage. Local SEO dreht das um: Wir richten Google Business Profile, ortsbezogene Suchbegriffe und Ihre Website so ein, dass Google Ihren Gartenservice in Berlin und Brandenburg zeigt, sobald jemand in Ihrem Einzugsgebiet nach Pflege oder Gestaltung sucht.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <a href="/sichtbarkeitscheck"
+           class="inline-flex items-center gap-2 bg-norex-accent text-white font-sans font-bold text-body px-6 py-4 rounded
+                  focus-visible:outline-2 focus-visible:outline-norex-primary focus-visible:outline-offset-2"
+           style="transition:transform 150ms cubic-bezier(0.34,1.56,0.64,1)"
+           onmouseover="this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.transform=''"
+           onmousedown="this.style.transform='translateY(0)'">
+          Sichtbarkeitscheck starten →
+        </a>
+        <a href="https://calendly.com/office-norexai/30min" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 font-sans font-semibold text-body text-norex-ink-500
+                  underline underline-offset-[3px] decoration-norex-ink-300
+                  focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2 rounded-sm"
+           style="transition:color 150ms,text-decoration-color 150ms"
+           onmouseover="this.style.color='#0A0A0A';this.style.textDecorationColor='#0A0A0A'"
+           onmouseout="this.style.color='';this.style.textDecorationColor=''">
+          30 Min mit Maurice &amp; Noah
+        </a>
+      </div>
+
+      <!-- Trust-Triade -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Berlin &amp; Brandenburg
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          90-Tage-Garantie
+        </span>
+        <span class="font-sans text-body-s text-norex-ink-400 flex items-center gap-1.5">
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Belegt am JR-Fall: Position 2
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 2 — GEWERK-KONTEXT  (dunkel)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-primary" aria-labelledby="kontext-heading">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Insider-Callout (Noah Ex-Betreiber) -->
+      <aside class="mb-10 rounded-xl overflow-hidden"
+             style="background:#1A1916;border:1px solid #3A3833;border-top:2px solid #E2231A;box-shadow:0 2px 0 rgba(0,0,0,0.25),0 8px 24px rgba(0,0,0,0.2);padding:20px 24px"
+             aria-label="Insider-Hinweis">
+        <p class="font-display font-bold text-white mb-1.5"
+           style="font-size:1.0625rem;line-height:1.2;letter-spacing:-0.01em">
+          Noah hat selbst einen Dienstleistungsbetrieb geführt.
+        </p>
+        <p class="font-sans" style="font-size:0.9375rem;line-height:1.65;color:#B8B5AB">
+          Er kennt das Muster aus dem Handwerk: Im Frühjahr ist der Kalender voll, im Spätherbst wird es ruhig — und dann hängt die Auftragslage an Stammkunden und Mundpropaganda. Local SEO bricht diese Saison-Abhängigkeit: Anwohner, die Sie nicht kennen, finden Ihren Gartenservice trotzdem, gerade wenn ein neuer Auftrag gebraucht wird. Genau dort setzt unsere Einrichtung an.
+        </p>
+      </aside>
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-6">Warum Local SEO</p>
+
+      <h2 id="kontext-heading" class="font-display font-extrabold text-white mb-10"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Warum findet Google Ihren Gartenservice nicht?
+      </h2>
+
+      <!-- Nummerierte Liste -->
+      <div class="space-y-0 divide-y divide-norex-ink-600">
+
+        <!-- 01 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">01</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Die Suche endet am Ortsrand — Ihre Sichtbarkeit auch
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              46 % aller Google-Suchen haben eine lokale Absicht (Backlinko, 2024, international). Wer „Heckenschnitt Potsdam“ oder „Rasenpflege Treptow“ sucht, will einen Betrieb mit kurzer Anfahrt — keinen, der eine Stunde fährt und den Aufschlag auf die Rechnung packt. Steht Ihr Gartenservice in diesem Moment nicht oben, sieht der Anwohner Sie nicht. Local SEO sorgt dafür, dass Google Sie genau für diese Orts-Suchen ausspielt.
+            </p>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">02</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Garten-Anfragen sind dringend — und kommen ungeplant
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              76 % der Menschen, die lokal nach einem Anbieter suchen, besuchen oder kontaktieren ihn innerhalb von 24 Stunden (Backlinko, Datenquelle Google, 2024, international). Der überwucherte Garten vor dem Hausverkauf, die Hecke, die über den Zaun zum Nachbarn wächst, der Sturmschaden nach dem Wochenende — das wartet nicht. Der Anwohner ruft denselben Tag an, beim ersten Gartenservice, der in der Nähe oben steht. Local SEO platziert Sie an genau dieser Stelle.
+            </p>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">03</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              Der Privatgarten ist Ihr größter Markt — und der googelt
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              56,87 % des GaLaBau-Umsatzes entfallen auf den Privatgarten — 6,32 Mrd. €, der mit Abstand größte Auftragsbereich der Branche (BGL Branchenstatistik, 2025). Private Auftraggeber haben keinen Einkäufer und keinen Rahmenvertrag; sie suchen bei Google, vergleichen drei Profile und entscheiden nach dem ersten Eindruck. Wer in dieser Liste fehlt, verliert genau das Segment, das die meisten Aufträge bringt. Local SEO bringt Sie dorthin, wo private Kunden Sie finden.
+            </p>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="flex items-start gap-6 py-8 md:py-10">
+          <span class="font-mono font-bold text-norex-accent flex-shrink-0 mt-1" style="font-size:0.75rem;letter-spacing:0.05em" aria-hidden="true">04</span>
+          <div>
+            <h3 class="font-display font-bold text-white mb-2" style="font-size:clamp(1.125rem,2.5vw,1.5rem);line-height:1.2;letter-spacing:-0.015em">
+              NAP-Chaos schwächt Ihr Ranking — meist unbemerkt
+            </h3>
+            <p class="font-sans text-body text-norex-ink-300 leading-relaxed max-w-2xl">
+              Widersprüchliche Angaben zu Name, Adresse und Telefon über Verzeichnisse hinweg verwirren Google und drücken Ihr lokales Ranking. Beim JR-Fall fanden wir zwei Telefonnummern auf der Website und zwei parallele Google-Profile — beide Signale arbeiteten gegeneinander. Bei Gartenbetrieben kommt oft die Handynummer auf Flyern und Fahrzeugen dazu, die nirgends mit dem Profil übereinstimmt. Wir vereinheitlichen Ihre Daten über 15+ Branchenverzeichnisse, damit Google ein klares, starkes Signal bekommt.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Silo-Naht: Link auf die Money-Page -->
+      <p class="font-sans text-body text-norex-ink-300 mt-10">
+        <a href="/leistungen/akquise" data-track="crosslink_local-seo-gartenservice_to_akquise"
+           class="text-white font-medium underline underline-offset-2 decoration-norex-ink-400 hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:text-decoration-color 150ms">
+          So setzt Norex Local SEO für Gartenbetriebe konkret um →
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 3 — BEWEIS-BLOCK  (soft) — echte JR-Pilot-Daten (System-Beweis)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 px-4 md:px-8 bg-norex-bg-soft" aria-labelledby="score-heading">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-14">
+        <p class="font-mono font-bold text-norex-accent uppercase tracking-widest mb-3"
+           style="font-size:0.65rem;letter-spacing:0.12em">Belegt am JR-Fall · Gebäudereinigung, Falkensee</p>
+        <h2 id="score-heading" class="font-display font-extrabold text-norex-primary"
+            style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+          Was bringt Local SEO für lokale Dienstleister konkret?
+        </h2>
+      </div>
+
+      <div class="norex-score-quadratik grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Karte 1 — Ranking (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Ranking</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">Platz&nbsp;2</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">bei Google für „fensterputzer&nbsp;falkensee“ — vorher nicht in den Top&nbsp;50.</p>
+        </div>
+
+        <!-- Karte 2 — Tempo (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Tempo</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">7&nbsp;Tage</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">von der Live-Schaltung bis auf Google-Position&nbsp;2.</p>
+        </div>
+
+        <!-- Karte 3 — Reichweite (echtes JR-Outcome) -->
+        <div class="norex-score-card bg-white p-8 rounded-xl"
+             style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 8px 24px rgba(10,10,10,0.08),0 1px 2px rgba(10,10,10,0.04)">
+          <p class="font-mono font-bold text-norex-ink-400 uppercase tracking-widest mb-6"
+             style="font-size:0.6rem;letter-spacing:0.1em">Reichweite</p>
+          <p class="font-display font-extrabold text-norex-accent mb-3"
+             style="font-size:clamp(2.25rem,5vw,3rem);line-height:1;letter-spacing:-0.02em">40+</p>
+          <p class="font-sans text-body-s text-norex-ink-500 leading-relaxed">Standorte im Einzugsgebiet, für die JR&nbsp;Gebäudeservice jetzt gefunden wird.</p>
+        </div>
+
+      </div><!-- /.norex-score-quadratik -->
+
+      <!-- Was das für Ihren Betrieb heißt — outcome-orientierte Branchenzahl (distinct von Body-Stats) -->
+      <div class="mt-12 max-w-3xl mx-auto rounded-xl border-l-4 border-norex-accent bg-white p-6 md:p-7"
+           style="box-shadow:0 2px 8px rgba(10,10,10,0.06),0 4px 16px rgba(10,10,10,0.06)">
+        <p class="font-mono font-bold text-norex-accent uppercase tracking-widest mb-2"
+           style="font-size:0.6rem;letter-spacing:0.1em">Was das für Ihren Betrieb heißt</p>
+        <p class="font-sans text-norex-ink-500 leading-relaxed" style="font-size:1rem">
+          <strong class="text-norex-primary font-semibold">Ein vollständiges Google-Profil macht es 50 % wahrscheinlicher, dass Kunden Sie überhaupt für einen Auftrag in Betracht ziehen</strong> (Backlinko, Datenquelle Google, 2024, international). Beim Gartenservice heißt das: Fotos echter Projekte, klare Leistungen und gepflegte Bewertungen entscheiden, ob die Anfrage bei Ihnen oder beim Nachbarbetrieb landet.
+        </p>
+      </div>
+
+      <!-- Quellen-Caption — echtes Ergebnis, benannte Quelle -->
+      <p class="font-sans text-body-s text-norex-ink-300 text-center mt-8">
+        Echte Zahlen aus dem Norex-Projekt für JR Gebäudeservice (Falkensee) — Audit &amp; Launch Mai&nbsp;2026, alle Werte im verlinkten Fallbericht belegt. Dieselbe Methode bauen wir für Gartenbetriebe auf.
+      </p>
+
+      <!-- Proof-Link auf JR-Case-Study -->
+      <p class="font-sans text-body-s text-norex-ink-400 text-center mt-4">
+        <a href="/referenzen/jr-gebaeudeservice" data-track="crosslink_local-seo-gartenservice_to_jr"
+           class="text-norex-primary font-medium underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:color 150ms">
+          Den vollständigen JR-Fall mit Zeitstrahl ansehen →
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 4 — TRUST-SIGNALE  (weiß) — Branchenkennzahl + Methode
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-white" aria-labelledby="trust-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-4">Worauf wir aufbauen</p>
+      <h2 id="trust-heading" class="font-display font-bold text-norex-primary mb-10"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Was macht Local SEO bei Norex anders?
+      </h2>
+
+      <!-- Branchenkennzahl-Karte -->
+      <div class="border border-norex-ink-200 p-8 md:p-10 mb-8"
+           style="box-shadow:0 2px 8px rgba(10,10,10,0.04),0 12px 32px rgba(10,10,10,0.06)">
+        <p class="font-mono font-bold text-norex-accent tabular-nums mb-2" style="font-size:clamp(2rem,5vw,3rem);line-height:1;letter-spacing:-0.025em">
+          56,87 %
+        </p>
+        <p class="font-sans text-body text-norex-ink-500 leading-relaxed mb-3">
+          des gesamten GaLaBau-Umsatzes in Deutschland entfallen auf den Privatgarten — 6,32 Mrd. € und damit der größte Auftragsbereich der Branche. Für Ihren Gartenservice heißt das: Genau das Segment, das die meisten Aufträge bringt, sucht und vergleicht bei Google. Local SEO ist deshalb kein Zusatz, sondern der Zugang zu Ihrem Hauptmarkt.
+        </p>
+        <p class="font-sans text-body-s text-norex-ink-400">
+          Quelle:
+          <a href="https://www.presseportal.de/pm/117960/6225203" target="_blank" rel="noopener noreferrer"
+             class="underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+             style="transition:color 150ms">BGL Branchenstatistik, 2025</a>
+        </p>
+      </div>
+
+      <!-- Body-Fließtext — Daten-Triangulation -->
+      <div class="font-sans text-body text-norex-ink-500 leading-relaxed space-y-5 max-w-2xl">
+        <p>
+          Wir bauen Local SEO nicht aus der Theorie, sondern aus drei zusammenpassenden Ebenen. Erstens die Branchenrealität: Wenn der Privatgarten 56,87 % des GaLaBau-Umsatzes ausmacht (BGL, 2025) und 46 % aller Suchen lokal sind (Backlinko, 2024, international), entscheidet Ihre Orts-Sichtbarkeit über den Auftrag. Zweitens Noahs Innensicht — er hat selbst einen Dienstleistungsbetrieb geführt und weiß, wie sich die Abhängigkeit von Stammkunden und Saison anfühlt. Drittens ein belegter Fall statt eines Versprechens.
+        </p>
+        <p>
+          Dieser Fall ist JR Gebäudeservice in Falkensee — derselbe lokale Dienstleister-Markt, dieselbe Mechanik wie im Gartenbau. Vor unserer Arbeit: zwei widersprüchliche Telefonnummern, zwei parallele Google-Profile, kein Schema-Markup, sechs Bewertungen gegen 319+ beim Hauptmitbewerber. Nach Audit, Static-HTML-Neubau, GBP-Bereinigung und über 40 eigenen Standort-Seiten stand der Betrieb in 7 Tagen auf Google-Position 2 für „fensterputzer falkensee“ — und bekam zwei Anfragen über das neue Formular in zwei Wochen. Dieselbe Methode wenden wir für Ihren Gartenservice in Berlin und Brandenburg an. Mehr Aufträge. Mehr Sichtbarkeit. Wir machen das.
+        </p>
+      </div>
+
+      <!-- Sibling-Links — verwandte Spokes im selben Gewerk-Cluster -->
+      <div class="mt-10 pt-8 border-t border-norex-ink-200">
+        <p class="font-sans text-body-s text-norex-ink-400 uppercase tracking-widest font-semibold mb-4">Mehr aus dem Garten-Cluster</p>
+        <ul class="space-y-2.5">
+          <li>
+            <a href="/wissen/google-business-profile-gartenservice"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Google Business Profile für Gartenservice einrichten →</a>
+          </li>
+          <li>
+            <a href="/wissen/neukunden-gartenservice-berlin"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Neukunden für den Gartenservice in Berlin gewinnen →</a>
+          </li>
+          <li>
+            <a href="/wissen/website-gartenservice"
+               class="font-sans text-body text-norex-ink-600 font-medium underline underline-offset-2 decoration-norex-ink-300 hover:text-norex-accent hover:decoration-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+               style="transition:color 150ms,text-decoration-color 150ms">Website für Gartenservice erstellen lassen →</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 5 — PROZESS "WIE ES LÄUFT"  (dunkel)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-primary" aria-labelledby="prozess-heading">
+    <div class="max-w-4xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-4">Wie es läuft</p>
+      <h2 id="prozess-heading" class="font-display font-extrabold text-white mb-6"
+          style="font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Drei Schritte bis zur ersten Anfrage.
+      </h2>
+
+      <!-- Einleitungssatz -->
+      <p class="font-sans text-body-l text-white/70 mb-14 max-w-xl" style="line-height:1.7">
+        Sie müssen kein Tool bedienen und keine SEO-Begriffe lernen. Wir richten Ihre Local-SEO-Grundlage für den Gartenservice ein — Sie arbeiten weiter im Garten, das Telefon klingelt.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:divide-x divide-norex-ink-600">
+
+        <!-- Schritt 1 -->
+        <div class="pb-10 md:pb-0 md:pr-10">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">01</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            Sichtbarkeitscheck
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Kostenlos. Wir prüfen Ihr Google-Profil, Ihre Orts-Rankings für Pflege und Gestaltung und die Konkurrenz in Ihrem Einzugsgebiet. In 48 Stunden haben Sie eine klare Analyse — wo Sie heute stehen und was als Erstes zählt.
+          </p>
+        </div>
+
+        <!-- Schritt 2 -->
+        <div class="py-10 md:py-0 md:px-10 border-t md:border-t-0 border-norex-ink-600">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">02</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            Einrichtung
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Wir richten alles ein: Google Business Profile vollständig mit Projekt-Fotos, NAP-Konsistenz über 15+ Verzeichnisse, ortsbezogene Suchbegriffe und Ihre Website. Kein Aufwand für Sie — in 1–2 Wochen läuft die Grundlage.
+          </p>
+        </div>
+
+        <!-- Schritt 3 -->
+        <div class="pt-10 md:pt-0 md:pl-10 border-t md:border-t-0 border-norex-ink-600">
+          <p class="font-mono font-bold text-norex-accent mb-4" style="font-size:0.75rem;letter-spacing:0.05em">03</p>
+          <h3 class="font-display font-bold text-white mb-3" style="font-size:1.25rem;line-height:1.2;letter-spacing:-0.01em">
+            90-Tage-Monitoring
+          </h3>
+          <p class="font-sans text-body text-norex-ink-300 leading-relaxed">
+            Jeden Monat sehen Sie, wie sich Profil-Aufrufe, Anrufe und Rankings entwickeln — dazu 30 Minuten mit Maurice oder Noah. Innerhalb von 90 Tagen wird der Effekt messbar, abgesichert durch unsere Garantie.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 6 — GARANTIE-BLOCK  (soft)
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-norex-bg-soft" aria-labelledby="garantie-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-accent uppercase tracking-widest mb-6">90-Tage-Garantie</p>
+
+      <h2 id="garantie-heading" class="font-display font-extrabold text-norex-primary mb-6"
+          style="font-size:clamp(1.75rem,4vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Messbar mehr — oder der erste Monatsbeitrag entfällt.
+      </h2>
+
+      <p class="font-sans text-body-l text-norex-ink-500 mb-10 max-w-xl" style="line-height:1.7">
+        Wir garantieren konkrete, messbare Ergebnisse in 90 Tagen. Wird keines der drei Ziele erreicht, entfällt der erste Monatsbeitrag — 500 €, ohne Diskussion.
+      </p>
+
+      <!-- ODER-KPIs -->
+      <div class="space-y-0 divide-y divide-norex-ink-200 mb-10">
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">A</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Profil-Anzeigen auf Google <strong class="text-norex-accent">+50%</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">Gemessen in Ihrem Google-Profil-Konto</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">B</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Anrufe über Google <strong class="text-norex-accent">+5 pro Monat</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">Anrufe direkt über Google Maps</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 py-5">
+          <div class="flex-shrink-0 w-8 h-8 border border-norex-ink-200 flex items-center justify-center">
+            <span class="font-mono text-norex-accent font-bold text-body-s">C</span>
+          </div>
+          <div>
+            <p class="font-sans font-medium text-norex-primary text-body">Anfragen über Ihre Homepage <strong class="text-norex-accent">+3 pro Monat</strong></p>
+            <p class="font-sans text-body-s text-norex-ink-400 mt-0.5">In Ihrer Homepage-Statistik — jeden Monat einsehbar</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="/garantie"
+         class="inline-flex items-center gap-2 border border-norex-ink-300 text-norex-ink-500 font-sans text-body-s px-5 py-2.5 rounded
+                hover:border-norex-primary hover:text-norex-primary focus-visible:outline-2 focus-visible:outline-norex-accent focus-visible:outline-offset-2"
+         style="transition:border-color 150ms,color 150ms">
+        Alle Garantie-Details →
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       SECTION 7 — FAQ  (weiß) — native details/summary, kein FAQPage-JSON-LD
+       ════════════════════════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-4 md:px-8 bg-white" aria-labelledby="faq-heading">
+    <div class="max-w-3xl mx-auto">
+
+      <p class="font-display font-semibold text-body-s text-norex-ink-400 uppercase tracking-widest mb-4">Häufige Fragen</p>
+      <h2 id="faq-heading" class="font-display font-bold text-norex-primary mb-12"
+          style="font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">
+        Local SEO für den Gartenservice — häufige Fragen.
+      </h2>
+
+      <div class="space-y-0 divide-y divide-norex-ink-200">
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Was ist Local SEO für einen Gartenservice konkret?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Local SEO macht einen Gartenservice in der lokalen Google-Suche sichtbar — dort, wo Anwohner mit Ortsbezug suchen, etwa „Gartenpflege Steglitz“ oder „Heckenschnitt Werder“. Dazu gehören ein vollständiges Google Business Profile mit Fotos echter Projekte, einheitliche Angaben zu Name, Adresse und Telefon über alle Verzeichnisse (NAP-Konsistenz), ortsbezogene Suchbegriffe für Pflege und Gestaltung sowie eine schnelle, suchmaschinenfreundliche Website. Ziel: Ihr Betrieb erscheint in Google Maps und in der lokalen Trefferliste ganz oben.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Lohnt sich Local SEO trotz der Saison im Gartenbau?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Gerade wegen der Saison. Local SEO baut Sichtbarkeit auf, die das ganze Jahr arbeitet: Im Frühjahr fängt sie die Welle an Pflege- und Gestaltungsanfragen ab, im Herbst Laub- und Winterdienst, und in der ruhigen Phase landen genau die ungeplanten Aufträge bei Ihnen — Sturmschaden, Hausverkauf, überwucherter Garten. Weil der Aufbau Wochen braucht, lohnt sich der Start vor der Saison, nicht mittendrin. So sind Sie oben, wenn die Nachfrage anzieht.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Wie lange dauert es, bis Local SEO bei einem Gartenbetrieb wirkt?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Erste Effekte zeigen sich meist in 4–8 Wochen nach vollständiger Einrichtung. Bei JR Gebäudeservice in Falkensee — demselben lokalen Dienstleister-Markt — stand der Betrieb nach Launch in 7 Tagen auf Google-Position 2 für sein Hauptkeyword; das ist ein starker Einzelfall, kein garantierter Standard. Norex sichert das Ergebnis über 90 Tage mit einer messbaren Garantie ab: Profil-Anzeigen +50 %, Anrufe +5/Monat oder Formular-Anfragen +3/Monat.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Funktioniert Local SEO auch für Gartenbetriebe in Brandenburg?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Ja. Norex betreut Gartenservice- und GaLaBau-Betriebe in ganz Berlin und im gesamten Bundesland Brandenburg — vom Speckgürtel über Potsdam und das Havelland bis ins weitere Umland, wo Grundstücke groß und Privatgärten häufig sind. Der bisher stärkste belegte Fall liegt in Falkensee. Die Einrichtung läuft vollständig remote: Audit, Google-Profile, Local SEO, Reports und Calls laufen digital, ein Vor-Ort-Termin ist nicht nötig.</p>
+          </div>
+        </details>
+
+        <details class="group py-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer list-none">
+            <span class="font-display font-semibold text-norex-primary text-body-l">Warum reichen gute Projekt-Fotos allein nicht für ein gutes Ranking?</span>
+            <svg class="faq-chevron flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-answer pt-4 pb-2">
+            <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Schöne Fotos von angelegten Gärten überzeugen Menschen, sobald sie Ihr Profil sehen — aber sie bringen niemanden dorthin. Google entscheidet die Reihenfolge nach anderen Signalen: ob Ihr Profil vollständig ist, ob Ihre Angaben überall identisch sind und ob Ihre Website lokal relevant und schnell ist. Beim JR-Fall schwächten zwei parallele Google-Profile und widersprüchliche Telefonnummern das Ranking — trotz guter Arbeit. Erst als diese Signale bereinigt waren, sprang die Position nach oben. Local SEO bringt Auffindbarkeit und Bildwirkung zusammen.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Bridge FAQ → Direktkontakt -->
+      <div class="mt-8 pt-6 border-t border-norex-ink-200 flex flex-col sm:flex-row sm:items-center gap-3">
+        <p class="font-sans text-body text-norex-ink-500">Haben Sie eine Frage die hier nicht steht?</p>
+        <a href="https://wa.me/4915156198195" target="_blank" rel="noopener noreferrer"
+           class="font-sans text-body font-medium text-norex-primary underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           style="transition:color 150ms" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'whatsapp_click'})">
+          Direkt auf WhatsApp schreiben — Antwort am selben Werktag
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- CTA-Footer Component -->
+  <div data-component="cta-footer"></div>
+
+  <!-- Footer Component -->
+  <div data-component="footer"></div>
+
+  <!-- Component Loader -->
+  <script src="/assets/loader.js"></script>
+
+</body>
+</html>
