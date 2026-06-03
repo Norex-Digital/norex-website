@@ -44,9 +44,8 @@
 
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
-  <!-- GA4 Conversion-Event Trigger (Phase J: Tracking-Setup ersetzt das Placeholder)
-       Diese Seite ist Conversion-Endpunkt für alle Formulare. -->
-  <!-- TODO Phase J: GA4-Event 'form_submit_success' hier auslösen, sobald GA4 verkabelt ist. -->
+  <!-- GA4 Conversion-Event Trigger — Conversion-Endpunkt für das Haupt-Kontaktformular.
+       Feuert 'generate_lead' (Schlüsselereignis) bei echtem Submit (?from=form), Consent-gated, einmalig. -->
 
   <style>
     @keyframes fadeUp {
@@ -123,9 +122,9 @@
       function fireConversion() {
         if (fired) return;
         fired = true;
-        gtag('event', 'form_submit_success', {
+        gtag('event', 'generate_lead', {
           event_category: 'kontakt',
-          event_label: 'form_submit_success'
+          event_label: 'kontaktformular'
         });
       }
 
