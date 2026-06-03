@@ -68,6 +68,8 @@
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
@@ -85,10 +87,11 @@
   <script defer src="/assets/klaro/klaro.js"></script>
 </head>
 <body class="bg-white font-sans antialiased text-norex-primary">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
 
   <div data-component="nav" style="visibility:hidden"></div>
 
-  <section class="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
+  <section id="main-content" class="pt-32 pb-12 md:pt-40 md:pb-16 bg-white">
     <div class="max-w-3xl mx-auto px-6 md:px-10">
       <p class="font-mono text-body-s uppercase tracking-[0.18em] text-norex-ink-500 mb-6">
         <span class="inline-block w-2 h-2 bg-norex-accent align-middle mr-3"></span>
@@ -151,7 +154,7 @@
 
       <h2>Haftung für Inhalte</h2>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
       </p>
       <p>
         Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.

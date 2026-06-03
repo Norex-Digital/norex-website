@@ -9,7 +9,7 @@ var klaroConfig = {
   translations: {
     de: {
       consentNotice: {
-        description: 'Wir nutzen Google Analytics um zu verstehen, welche Inhalte unseren Besuchern helfen. Keine Weitergabe an Dritte. Details in unserer Datenschutzerklärung.',
+        description: 'Wir nutzen Google Analytics um zu verstehen, welche Inhalte unseren Besuchern helfen, sowie Google Maps zur Anzeige unseres Standorts. Keine Weitergabe an Dritte über diese Dienste hinaus. Details in unserer Datenschutzerklärung.',
       },
       consentModal: {
         title: 'Cookie-Einstellungen',
@@ -38,10 +38,22 @@ var klaroConfig = {
         [/^_gid/, '/', 'norex-digital.de']
       ],
       onAccept: function() {
-        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+        // Danke-Seite: Form-Conversion erst nach erteiltem Consent feuern.
+        if (typeof window.__norexFormConversion === 'function') {
+          window.__norexFormConversion();
+        }
       },
       onDecline: function() {
-        gtag('consent', 'update', { 'analytics_storage': 'denied' });
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        });
       }
     }
   ]

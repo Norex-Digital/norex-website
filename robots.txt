@@ -8,6 +8,9 @@ Disallow: /.claude/
 Disallow: /node_modules/
 Disallow: /temporary screenshots/
 Disallow: /assets/components/
+Disallow: /assets/templates/
+Disallow: /preview-
+Disallow: /premium-fensterreinigung/
 
 # ===== AI-/LLM-Crawler — explizit erlaubt (AEO/LLM-Sichtbarkeit), gleiche Sperren wie * =====
 User-agent: GPTBot
@@ -28,5 +31,8 @@ Disallow: /.claude/
 Disallow: /node_modules/
 Disallow: /temporary screenshots/
 Disallow: /assets/components/
+Disallow: /assets/templates/
+Disallow: /preview-
+Disallow: /premium-fensterreinigung/
 
 Sitemap: https://norex-digital.de/sitemap.xml

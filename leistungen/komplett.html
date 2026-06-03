@@ -85,7 +85,8 @@
         "url": "https://norex-digital.de/leistungen/komplett",
         "description": "Wie Neukundengewinnung und Werbeanzeigen bei Norex zusammenwirken: erst organisches Fundament, dann die Werbeanzeigen.",
         "inLanguage": "de-DE",
-        "isPartOf": { "@type": "WebSite", "name": "Norex", "url": "https://norex-digital.de/" }
+        "isPartOf": { "@id": "https://norex-digital.de/#website" },
+        "breadcrumb": { "@id": "https://norex-digital.de/leistungen/komplett#breadcrumb" }
       },
       {
         "@type": "Service",
@@ -106,6 +107,7 @@
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://norex-digital.de/leistungen/komplett#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://norex-digital.de/" },
           { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://norex-digital.de/leistungen" },
@@ -117,12 +119,13 @@
   </script>
 </head>
 <body class="bg-white font-sans text-norex-primary antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
   <div data-component="nav" style="visibility:hidden"></div>
 
   <!-- ========== HERO ========== -->
-  <section class="pt-28 md:pt-36 pb-16 md:pb-24 px-4 md:px-8 bg-white">
+  <section id="main-content" class="pt-28 md:pt-36 pb-16 md:pb-24 px-4 md:px-8 bg-white">
     <div class="max-w-3xl mx-auto text-center">
-      <p class="font-mono text-body-s text-norex-accent uppercase tracking-widest mb-5">Das komplette System</p>
+      <p class="font-mono text-body-s text-norex-accent uppercase tracking-widest mb-5">Das komplette System · Reinigung &amp; Gartenservice in Berlin &amp; Brandenburg</p>
       <h1 class="font-display font-extrabold text-norex-primary mb-6"
           style="font-size:clamp(2.75rem,7vw,4.5rem);line-height:0.98;letter-spacing:-0.035em;text-wrap:balance">
         Fundament bauen.<br>
@@ -156,8 +159,8 @@
         <ul class="space-y-3 mb-8">
           <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">Website neu gebaut oder bestehende optimiert</span></li>
           <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">Google Business Profile vollständig, 2× Posting pro Woche</span></li>
-          <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">Local SEO: Bezirk-Keywords und Branchenverzeichnisse</span></li>
-          <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">90-Tage-Garantie: messbare Ziele, sonst entfällt der erste Monat</span></li>
+          <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">Local SEO: Bezirk-Keywords und 15+ Branchenverzeichnisse</span></li>
+          <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="flex-shrink-0 mt-1" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4" stroke="#E2231A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="font-sans text-body text-norex-ink-300">90-Tage-Garantie: GBP-Impressionen +50% oder Anrufe +5/Mo oder Formular-Anfragen +3/Mo — sonst entfällt der erste Monat</span></li>
         </ul>
         <p class="font-mono font-bold text-white mb-6" style="font-size:1.35rem">1.000 € Setup + 500 €/Mo</p>
         <a href="/leistungen/akquise"
@@ -203,7 +206,7 @@
       <div class="lg:order-1 bg-norex-bg-soft p-8 lg:p-10 border border-norex-ink-200">
         <p class="font-mono text-caption text-norex-accent uppercase tracking-widest mb-4">Kein Kaltangebot</p>
         <p class="font-sans text-body-l text-norex-primary leading-relaxed mb-4">Wir sprechen über Ads erst mit konkreten Zahlen auf dem Tisch.</p>
-        <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Kein Druck, kein Paketzwang. Wenn die Neukundengewinnung nach 60–90 Tagen liefert und Sie mehr Anfragen verkraften, zeigen wir Ihnen, was Ads zusätzlich bringen. Sie entscheiden.</p>
+        <p class="font-sans text-body text-norex-ink-500 leading-relaxed">Kein Druck. Wenn die Neukundengewinnung nach 60–90 Tagen liefert und Sie mehr Anfragen verkraften, zeigen wir Ihnen, was Ads zusätzlich bringen. Sie entscheiden nach 60–90 Tagen, ob Ads der nächste Schritt sind — keine Verpflichtung jetzt.</p>
       </div>
     </div>
   </section>
@@ -214,9 +217,9 @@
       <p class="font-mono text-body-s text-norex-ink-400 uppercase tracking-widest mb-4">Warum diese Reihenfolge</p>
       <h2 class="font-display font-bold text-norex-primary mb-6"
           style="font-size:clamp(1.5rem,3.5vw,2.25rem);line-height:1.15;letter-spacing:-0.02em;text-wrap:balance">
-        Warum gibt es bei Norex kein Kombi-Paket aus SEO und Ads?
+        Erst Fundament, dann Ads — warum diese Reihenfolge funktioniert.
       </h2>
-      <p class="font-sans text-body-l text-norex-ink-500 leading-relaxed">Wir verkaufen kein Kombi-Paket mit Rabatt-Etikett. Stattdessen bauen wir erst das Fundament, das ohne Werbebudget Aufträge bringt. Ads kommen dazu, wenn sie auf etwas Solidem aufsetzen. So zahlen Sie nie für Reichweite, die ins Leere läuft.</p>
+      <p class="font-sans text-body-l text-norex-ink-500 leading-relaxed">Zuerst bauen wir das Fundament, das ohne Werbebudget Aufträge bringt: Website, Google Business Profile und Local SEO. Ads kommen dazu, wenn sie auf etwas Solidem aufsetzen und Ihr Betrieb die Kapazität für mehr Anfragen hat. So zahlen Sie nie für Reichweite, die ins Leere läuft.</p>
     </div>
   </section>
 

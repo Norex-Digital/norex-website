@@ -128,9 +128,9 @@
 
     /* Mission */
     .mission-row {
-      transition: padding-left 220ms cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .mission-row:hover { padding-left: 12px; }
+    .mission-row:hover { transform: translateX(12px); }
 
     /* Inline-Link */
     .ed-link {
@@ -150,6 +150,8 @@
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
@@ -168,12 +170,14 @@
 </head>
 <body class="bg-white font-sans antialiased text-norex-primary">
 
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
+
   <div data-component="nav" style="visibility:hidden"></div>
 
   <!-- ═══════════════════════════════════════════════════
        1) HERO — Founder-Brief mit H2 "Wer wir sind."
   ════════════════════════════════════════════════════ -->
-  <section class="pt-36 pb-28 md:pt-44 md:pb-32 bg-white" aria-labelledby="hero-heading">
+  <section id="main-content" class="pt-36 pb-28 md:pt-44 md:pb-32 bg-white" aria-labelledby="hero-heading">
     <div class="max-w-3xl mx-auto px-6 md:px-10">
 
       <p class="font-mono text-body-s uppercase tracking-[0.18em] text-norex-ink-500 mb-8 fade-up fade-up-1">
@@ -182,17 +186,22 @@
       </p>
 
       <h1 id="hero-heading"
-          class="font-display font-extrabold text-norex-primary mb-12 fade-up fade-up-2"
+          class="font-display font-extrabold text-norex-primary mb-6 fade-up fade-up-2"
           style="font-size:clamp(2.5rem,6vw,4.5rem);line-height:0.98;letter-spacing:-0.04em;text-wrap:balance">
         Digitalisierung aus der Praxis — für Reinigung &amp; Gartenservice in Berlin.
       </h1>
+
+      <p class="font-display font-bold text-norex-accent mb-12 fade-up fade-up-2"
+         style="font-size:clamp(1.125rem,2.4vw,1.5rem);line-height:1.2;letter-spacing:-0.02em">
+        Mehr Aufträge. Mehr Sichtbarkeit. Wir machen das.
+      </p>
 
       <div class="founder-brief space-y-5 fade-up fade-up-3">
         <p style="font-size:1.1875rem">
           Wir sind Maurice und Noah. Norex haben wir 2026 gegründet — nachdem Noah selbst eine Gebäudereinigung und einen Gartenservice in Berlin betrieben hatte. Kleine Crew, zwei Branchen, viele Anfragen, zu wenig Zeit. Verpasste Anrufe, Nächte am Angebot.
         </p>
         <p style="font-size:1.1875rem">
-          Maurice baute ihm die ersten Abläufe: WhatsApp-Anfragen automatisch erfassen, Angebote-Templates füllen, an die richtige Person weiterleiten. Nach kurzer Zeit waren die Nächte am Angebot vorbei.
+          Maurice machte den Betrieb online sichtbar: Google-Profil geschärft, Website aufgesetzt, Local SEO eingerichtet. Nach kurzer Zeit kamen die Anfragen über Google statt nur über Empfehlung.
         </p>
         <p style="font-size:1.1875rem">
           Daraus wurde Norex — für die Betriebe in Berlin und Brandenburg, die das gleiche kennen.
@@ -248,7 +257,7 @@
           </h3>
           <div class="font-sans text-norex-ink-500 space-y-4" style="font-size:1.0625rem;line-height:1.7">
             <p>Maurice baut die Systeme im Hintergrund. Sie reden mit ihm direkt — kein Weiterschieben, kein Ticket-System.</p>
-            <p>Was er zusagt, setzt er selbst um: vom Google-Profil bis zur automatischen WhatsApp-Antwort.</p>
+            <p>Was er zusagt, setzt er selbst um: vom Google-Profil über die Website bis zum laufenden Local SEO.</p>
           </div>
         </article>
 
@@ -334,10 +343,10 @@
           <div>
             <h3 class="font-display font-bold text-norex-primary mb-3"
                 style="font-size:clamp(1.25rem,2.2vw,1.625rem);line-height:1.2;letter-spacing:-0.02em">
-              Maurice baut die ersten Abläufe für Noahs Betrieb.
+              Maurice macht Noahs Betrieb online sichtbar.
             </h3>
             <p class="font-sans text-norex-ink-500" style="font-size:1.0625rem;line-height:1.7">
-              WhatsApp-Anfragen automatisch erfassen, Angebote-Templates füllen, an die richtige Person weiterleiten. Die Nächte am Angebot sind vorbei.
+              Google-Profil geschärft, Website aufgesetzt, Local SEO eingerichtet. Die Anfragen kommen über Google — nicht mehr nur über Empfehlung.
             </p>
           </div>
         </div>
@@ -364,7 +373,7 @@
               Und es geht weiter.
             </h3>
             <p class="font-sans text-norex-ink-500" style="font-size:1.0625rem;line-height:1.7">
-              Wir betreuen Reinigungs- und Gartenservice-Betriebe in Berlin und Brandenburg. Eigenhändig — vom Start bis zur laufenden Begleitung.
+              Wir bringen Reinigungs- und Gartenservice-Betrieben in Berlin und Brandenburg mehr Aufträge und mehr Sichtbarkeit: Google-Profil, Website, Local SEO und Bewertungs-Setup — eigenhändig eingerichtet und laufend betreut.
             </p>
           </div>
         </div>
@@ -389,28 +398,28 @@
         <div role="listitem" class="mission-row py-10 md:py-14">
           <p class="font-display font-extrabold text-norex-primary"
              style="font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.1;letter-spacing:-0.025em">
-            Dass kein Auftrag mehr durchs Raster fällt.
+            Kein Auftrag fällt mehr durchs Raster.
           </p>
         </div>
 
         <div role="listitem" class="mission-row py-10 md:py-14">
           <p class="font-display font-extrabold text-norex-primary"
              style="font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.1;letter-spacing:-0.025em">
-            Dass Sie abends Feierabend haben.
+            Sie haben abends Feierabend.
           </p>
         </div>
 
         <div role="listitem" class="mission-row py-10 md:py-14">
           <p class="font-display font-extrabold text-norex-primary"
              style="font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.1;letter-spacing:-0.025em">
-            Dass kleine Betriebe online sichtbar sind. Auch ohne großes Marketing-Budget.
+            Kleine Betriebe sind online sichtbar. Auch ohne großes Marketing-Budget.
           </p>
         </div>
 
         <div role="listitem" class="mission-row py-10 md:py-14">
           <p class="font-display font-extrabold text-norex-primary"
              style="font-size:clamp(1.5rem,3.8vw,2.5rem);line-height:1.1;letter-spacing:-0.025em">
-            Dass die Komplettbetreuung funktioniert — von Google-Sichtbarkeit bis zu mehr Aufträgen.
+            Die Komplettbetreuung trägt — von Google-Sichtbarkeit bis zu mehr Aufträgen.
           </p>
         </div>
 

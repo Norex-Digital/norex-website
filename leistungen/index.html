@@ -73,6 +73,16 @@
         "areaServed": ["Berlin", "Brandenburg"]
       },
       {
+        "@type": "WebPage",
+        "@id": "https://norex-digital.de/leistungen#webpage",
+        "url": "https://norex-digital.de/leistungen",
+        "name": "Leistungen für Reinigung & Gartenservice Berlin — SEO & Ads · Norex",
+        "description": "Neukundengewinnung durch Local SEO und Website, dann Werbeanzeigen: LSA, Meta Ads und Google Search Ads. Für Reinigung & Gartenservice in Berlin.",
+        "inLanguage": "de-DE",
+        "isPartOf": { "@id": "https://norex-digital.de/#website" },
+        "breadcrumb": { "@id": "https://norex-digital.de/leistungen#breadcrumb" }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Was kostet die Digitalisierung für Reinigungs- und Gartenservice-Betriebe in Berlin?", "acceptedAnswer": { "@type": "Answer", "text": "Neukundengewinnung: 1.000 € Einrichtung + 500 €/Monat (mit 90-Tage-Garantie). Werbeanzeigen (LSA, Meta Ads, Google Search Ads): 700 € Einrichtung + 450 €/Monat (Bundle alle 3 Kanäle, angeboten nach bewiesenen Ergebnissen)." } },
@@ -112,6 +122,7 @@
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://norex-digital.de/leistungen#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://norex-digital.de/" },
           { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://norex-digital.de/leistungen" }
@@ -139,6 +150,8 @@
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
@@ -157,10 +170,12 @@
 </head>
 <body class="bg-white font-sans antialiased">
 
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
+
   <div data-component="nav" style="visibility:hidden"></div>
 
   <!-- ═══ HERO ═══ -->
-  <section class="pt-36 pb-16 px-4 md:px-8 bg-white" aria-labelledby="leistungen-hero-heading">
+  <section id="main-content" class="pt-36 pb-16 px-4 md:px-8 bg-white" aria-labelledby="leistungen-hero-heading">
     <div class="max-w-3xl mx-auto text-center">
 
       <h1 id="leistungen-hero-heading" class="font-display font-extrabold text-norex-primary mb-5"
@@ -233,7 +248,7 @@
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="flex-shrink-0" width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span class="font-sans text-body-s text-norex-ink-300">Local Ads (Google Verified): Einrichtung + Monitoring</span>
+                <span class="font-sans text-body-s text-norex-ink-300">Bewertungs-Setup: QR-Karte, Antwort-Templates, Briefing</span>
               </li>
               <li class="flex items-center gap-2.5">
                 <svg class="flex-shrink-0" width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" stroke="#1F7A4F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -351,7 +366,7 @@
             Komplettbetreuung aus einer Hand
           </h3>
           <p class="font-sans text-body text-norex-ink-400 leading-relaxed">
-            Kein Anbieter in Deutschland verbindet organische Neukundengewinnung und Werbeanzeigen so eng — spezialisiert auf Reinigung und Gartenservice.
+            Reinigung und Gartenservice in Berlin — die einzige Nische, die wir kennen. Noah hat sie selbst betrieben.
           </p>
         </div>
 
@@ -361,7 +376,7 @@
             Alles übernommen — kein Tool
           </h3>
           <p class="font-sans text-body text-norex-ink-400 leading-relaxed">
-            Sie bedienen keine Software. Wir richten alles ein, betreiben alles — GBP, Website, SEO, WhatsApp-System, Notion CRM. Sie machen Aufträge, wir machen den Rest.
+            Sie bedienen keine Software. Wir richten alles ein, betreiben alles — GBP, Website, Local SEO, Bewertungs-Setup. Sie machen Aufträge, wir machen den Rest.
           </p>
         </div>
 
@@ -539,7 +554,7 @@
       <div class="mt-12 pt-8 border-t border-norex-ink-200 flex flex-col sm:flex-row sm:items-center gap-3">
         <p class="font-sans text-body text-norex-ink-500">Weitere Fragen?</p>
         <a href="https://wa.me/4915156198195" target="_blank" rel="noopener noreferrer"
-           class="font-sans text-body font-medium text-norex-primary underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm"
+           class="font-sans text-body font-medium text-norex-primary underline underline-offset-2 hover:text-norex-accent focus-visible:outline-1 focus-visible:outline-norex-accent rounded-sm">
           Direkt auf WhatsApp — Antwort am selben Werktag
         </a>
       </div>

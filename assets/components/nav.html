@@ -130,7 +130,15 @@
   // Mobile hamburger
   var btn = document.getElementById('nav-toggle');
   var menu = document.getElementById('nav-mobile');
-  if (btn && menu) {
+  // A26: Single canonical toggle-Listener. loader.js initNav() kann denselben
+  // Button ebenfalls binden -> Doppel-Toggle (Klick hebt sich selbst auf).
+  // Clone-Replace entfernt jeden bereits gebundenen Listener, danach genau
+  // einmal binden und per data-nav-bound markieren.
+  if (btn && menu && !btn.dataset.navBound) {
+    var fresh = btn.cloneNode(true);
+    btn.parentNode.replaceChild(fresh, btn);
+    btn = fresh;
+    btn.dataset.navBound = '1';
     btn.addEventListener('click', function () {
       var open = menu.classList.toggle('hidden') === false;
       btn.setAttribute('aria-expanded', String(open));
@@ -176,7 +184,8 @@
 
   trigger.addEventListener('focus', openDropdown);
   panel.addEventListener('focusout', function (e) {
-    if (!wrapper.contains(e.relatedTarget)) closeDropdown();
+    // A26: null-guard — relatedTarget kann null sein (Klick ausserhalb / blur ins Nichts)
+    if (!e.relatedTarget || !wrapper.contains(e.relatedTarget)) closeDropdown();
   });
 
   document.addEventListener('keydown', function (e) {

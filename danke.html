@@ -100,6 +100,8 @@
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
@@ -110,18 +112,51 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-YCJ2TTH429');
-    // Kontaktformular-Conversion
-    gtag('event', 'generate_lead', {
-      event_category: 'kontakt',
-      event_label: 'kontaktformular_submit'
-    });
+
+    // Kontaktformular-Conversion — nur ein echter Form-Submit (?from=form),
+    // nach Consent-Freigabe (analytics_storage granted), genau einmal.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('from') !== 'form') return; // kein Reload/Bookmark/Direktaufruf
+
+      var fired = false;
+      function fireConversion() {
+        if (fired) return;
+        fired = true;
+        gtag('event', 'form_submit_success', {
+          event_category: 'kontakt',
+          event_label: 'form_submit_success'
+        });
+      }
+
+      // Wartet auf Consent-Update; GA4 puffert das Event bis analytics_storage granted ist.
+      // window.__norexFormConversion wird vom Klaro-onAccept-Pfad aufgerufen (s. klaro-config.js).
+      window.__norexFormConversion = fireConversion;
+
+      // Falls Consent bereits zuvor erteilt wurde, feuert das Event direkt;
+      // Consent Mode v2 hält es ansonsten zurück, bis Zustimmung vorliegt.
+      fireConversion();
+    })();
+</script>
+  <!-- Klaro Cookie Consent (DSGVO) — auf dieser noindex-Bestätigungsseite nur
+       bei echtem Form-Submit (?from=form) nötig: dort soll Consent eingeholt und
+       die Conversion gemessen werden. Direkt-/Bookmark-Aufrufe brauchen kein Banner. -->
+  <script>
+    if (new URLSearchParams(window.location.search).get('from') === 'form') {
+      var kCss = document.createElement('link');
+      kCss.rel = 'stylesheet'; kCss.href = '/assets/klaro/klaro.min.css';
+      document.head.appendChild(kCss);
+      var kCfg = document.createElement('script');
+      kCfg.src = '/assets/klaro/klaro-config.js';
+      document.head.appendChild(kCfg);
+      var kJs = document.createElement('script');
+      kJs.defer = true; kJs.src = '/assets/klaro/klaro.js';
+      document.head.appendChild(kJs);
+    }
   </script>
-  <!-- Klaro Cookie Consent (DSGVO) -->
-  <link rel="stylesheet" href="/assets/klaro/klaro.min.css">
-  <script src="/assets/klaro/klaro-config.js"></script>
-  <script defer src="/assets/klaro/klaro.js"></script>
 </head>
 <body class="bg-norex-bg-soft font-sans antialiased text-norex-primary min-h-screen flex flex-col">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
 
   <!-- Nav Component -->
   <div data-component="nav" style="visibility:hidden"></div>
@@ -130,7 +165,7 @@
        HERO + KONKRETE ERWARTUNG + 3 SCHRITTE
        Ruhige Seite, vertikal zentriert
   ════════════════════════════════════════════════════ -->
-  <main class="flex-1 flex items-center py-32 md:py-40">
+  <main id="main-content" class="flex-1 flex items-center py-32 md:py-40">
     <div class="max-w-2xl mx-auto px-6 md:px-10 text-center">
 
       <p class="font-mono text-body-s uppercase tracking-[0.2em] text-norex-accent mb-8 fade-up fade-up-1">

@@ -230,6 +230,8 @@
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'wait_for_update': 500
     });
   </script>
@@ -249,13 +251,15 @@
 
 <body class="bg-white font-sans text-norex-primary antialiased">
 
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[100] focus:bg-norex-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Zum Inhalt springen</a>
+
 <!-- NAV -->
 <div data-component="nav"></div>
 
 <!-- BACK-LINK -->
 <div class="bg-white border-b border-norex-ink-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-    <a href="/" class="inline-flex items-center gap-2 text-body-s font-mono text-norex-ink-400 uppercase tracking-wider hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-norex-accent focus-visible:ring-offset-2 rounded">
+    <a href="/" class="inline-flex items-center gap-2 text-body-s font-mono text-norex-ink-400 uppercase tracking-wider hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-norex-accent focus-visible:ring-offset-2 rounded">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
       Zur Startseite
     </a>
@@ -265,7 +269,7 @@
 <!-- ============================================================
      HERO — weiß, zentriert, max-w-3xl
      ============================================================ -->
-<section class="bg-white pt-16 pb-14 sm:pt-20 sm:pb-18">
+<section id="main-content" class="bg-white pt-16 pb-14 sm:pt-20 sm:pb-18">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
 
     <!-- Eyebrow -->
@@ -487,7 +491,7 @@
       <!-- DSGVO -->
       <p class="text-body-s text-norex-ink-400">
         Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Erstellung des Sichtbarkeitschecks zu.
-        Details in unserer <a href="/datenschutz" class="text-norex-primary underline underline-offset-2 hover:text-norex-accent transition-colors duration-150">Datenschutzerklärung</a>.
+        Details in unserer <a href="/datenschutz" class="text-norex-primary underline underline-offset-2 hover:text-norex-accent transition-[color] duration-150">Datenschutzerklärung</a>.
       </p>
 
       <div id="form-error" role="alert" aria-live="polite" class="hidden text-body-s text-norex-accent font-display font-semibold"></div>
@@ -562,7 +566,7 @@
           Mindestens eines dieser drei Ziele in 90 Tagen — oder der erste Monatsbeitrag (500 €) entfällt: +50% mehr Sichtbarkeit auf Google, +5 Anrufe/Monat über Google oder +3 Anfragen/Monat über Ihre Homepage.
         </p>
         <a href="/garantie"
-           class="inline-flex items-center gap-2 text-white font-display font-semibold text-body-s border-b border-norex-ink-500 pb-0.5 hover:border-white transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-norex-primary rounded-sm"
+           class="inline-flex items-center gap-2 text-white font-display font-semibold text-body-s border-b border-norex-ink-500 pb-0.5 hover:border-white transition-[border-color] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-norex-primary rounded-sm"
            data-track="sichtbarkeitscheck_to_garantie">
           Garantie-Bedingungen im Detail
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -588,7 +592,7 @@
     <div class="divide-y divide-norex-ink-200" role="list">
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Was kostet der Sichtbarkeitscheck?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -598,7 +602,7 @@
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Was genau wird geprüft — nur Google oder auch die Website?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -608,7 +612,7 @@
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Wie lange dauert die Auswertung?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -618,17 +622,17 @@
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Was passiert nach dem Check?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
         <p class="mt-4 text-body text-norex-ink-500 leading-relaxed">
-          Sie bekommen eine Auswertung mit konkreten Maßnahmen. Wenn Sie wollen, besprechen wir die Ergebnisse kurz per Telefon oder WhatsApp. Wenn Sie weitermachen wollen, können Sie das mitteilen — kein Druck, kein automatischer Folge-Call. Wie der Start danach aussieht: <a href="/so-laeuft-es-ab" class="text-norex-accent font-semibold underline underline-offset-4 decoration-norex-accent/40 hover:decoration-norex-accent transition-colors">So läuft das ab →</a>
+          Sie bekommen eine Auswertung mit konkreten Maßnahmen. Wenn Sie wollen, besprechen wir die Ergebnisse kurz per Telefon oder WhatsApp. Wenn Sie weitermachen wollen, können Sie das mitteilen — kein Druck, kein automatischer Folge-Call. Wie der Start danach aussieht: <a href="/so-laeuft-es-ab" class="text-norex-accent font-semibold underline underline-offset-4 decoration-norex-accent/40 hover:decoration-norex-accent transition-[text-decoration-color]">So läuft das ab →</a>
         </p>
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Werden meine Daten weitergegeben?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -638,7 +642,7 @@
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Ich habe noch keine Homepage — macht der Check trotzdem Sinn?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -648,7 +652,7 @@
       </details>
 
       <details class="group py-5" role="listitem">
-        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
+        <summary class="flex items-center justify-between gap-4 font-display font-semibold text-body-l text-norex-primary hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:text-norex-accent">
           Für wen ist der Check gedacht?
           <svg class="faq-icon flex-shrink-0 text-norex-ink-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
         </summary>
@@ -662,7 +666,7 @@
     <!-- Bridge -->
     <div class="mt-10 pt-8 border-t border-norex-ink-200">
       <p class="text-body text-norex-ink-400">Haben Sie eine Frage die hier nicht steht?
-        <a href="https://wa.me/4915156198195" class="text-norex-primary font-display font-semibold underline underline-offset-2 hover:text-norex-accent transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-norex-accent rounded-sm" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'whatsapp_click'})">
+        <a href="https://wa.me/4915156198195" class="text-norex-primary font-display font-semibold underline underline-offset-2 hover:text-norex-accent transition-[color] duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-norex-accent rounded-sm" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'contact',event_label:'whatsapp_click'})">
           Direkt auf WhatsApp — Antwort in 4h.
         </a>
       </p>
