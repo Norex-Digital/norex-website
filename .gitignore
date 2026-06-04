@@ -41,3 +41,19 @@ brand_assets/email_signature/
 
 # Brainstorming Visual Companion
 .superpowers/
+
+# --- Intern (von Migration ergaenzt): nie ins public/Vercel-Repo ---
+.claude/
+.superpowers/
+.gstack/
+context/
+tasks/
+DESIGN.md
+audit-tech.mjs
+screenshot.mjs
+screenshot-walkthrough.mjs
+serve.mjs
+docs/pseo-*.md
+docs/pseo_*.md
+docs/superpowers/
+assets/templates/
