@@ -1,4 +1,16 @@
-@../Norex Schaltzentrale/norex_context.md
+# Wer ist Norex (Kern-Kontext — IMMER zuerst lesen)
+
+> ⚠️ **Norex ist KEINE Reinigungs-/Gartenfirma.** Norex ist die **Agentur**, deren Kunden Reinigungs- und Gartenbetriebe sind. Verwechslung = falsche Keyword-/Copy-/SEO-Strategie.
+
+- **Was:** Digitalisierungspartner für **Reinigungs- und Gartenservice-Betriebe** in Deutschland. KI-gestützt, Done-For-You, Boutique-Größe. Standort Berlin/Brandenburg.
+- **Gründer:** Maurice Brehm & Noah Telo (GbR). Noah hat selbst Reinigung + Gartenservice betrieben (Insider-Edge).
+- **Master-Claim:** „Mehr Aufträge. Mehr Sichtbarkeit. Wir machen das."
+- **Angebot Segment A — Neukundengewinnung** (Setup 1.000 € · 500 €/Mo): Website, Local SEO, Google Business Profile, On-Page SEO, Bewertungs-Setup, Reporting. 90-Tage-Ergebnisgarantie (GBP-Impressionen +50% ODER Anrufe +5/Mo ODER Form-Submits +3/Mo).
+- **Angebot Segment B — Werbeanzeigen** (Upsell nach 60–90 Tagen): LSA, Meta Ads, Google Search Ads. Ad-Spend immer direkt Kunde→Plattform.
+- **ICP:** Reinigungs-/Gartenbetriebe, 1–6 MA, bis ~300k € Umsatz. **Endkunden-Keywords wie „gebäudereinigung berlin" sind die Keywords der KUNDEN, nicht von Norex.**
+- **Pilot/Referenz:** JR Gebäudeservice / Julien Ranft, `premium-fensterreinigung.de` (Falkensee) — Referenzen darauf sind korrekt, nicht stale.
+
+**Volle Strategie (Single Source of Truth):** `norex_context.md` + `docs/business_summary.md` in der **Norex Schaltzentrale** (Google Drive). Pfad ist maschinenabhängig — PC: `G:\Meine Ablage\Norex Schaltzentrale\`, Mac: `~/Library/CloudStorage/GoogleDrive-office@norexai.de/Meine Ablage/Norex Schaltzentrale/`. Bei strategischen Entscheidungen dort nachlesen (vorher `ls` zum Pfad-Check).
 
 # CLAUDE.md — Frontend Website Regeln
 
