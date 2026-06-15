@@ -57,3 +57,4 @@ docs/pseo-*.md
 docs/pseo_*.md
 docs/superpowers/
 assets/templates/
+.claude/settings.local.json
